@@ -1,3 +1,88 @@
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 100;
+  src: local("Roboto Thin Italic"), local(Roboto-ThinItalic), url(//fonts.gstatic.com/s/roboto/v18/12mE4jfMSBTmg-81EiS-YVQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/12mE4jfMSBTmg-81EiS-Yfk_vArhqVIZ0nv9q090hN8.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/12mE4jfMSBTmg-81EiS-YRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  src: local("Roboto Light Italic"), local(Roboto-LightItalic), url(//fonts.gstatic.com/s/roboto/v18/7m8l7TlFO-S3VkhHuR0at2fQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/7m8l7TlFO-S3VkhHuR0at44P5ICox8Kq3LLUNMylGO4.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/7m8l7TlFO-S3VkhHuR0at4bN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Roboto Italic"), local(Roboto-Italic), url(//fonts.gstatic.com/s/roboto/v18/OiNnAEwKzzJkQCr4qZmeq_esZW2xOQ-xsNqO47m55DA.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/1pO9eUAp8pSF8VnRTP3xnvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  src: local("Roboto Medium Italic"), local(Roboto-MediumItalic), url(//fonts.gstatic.com/s/roboto/v18/OLffGBTaF0XFOW1gnuHF0WfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/OLffGBTaF0XFOW1gnuHF0Y4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/OLffGBTaF0XFOW1gnuHF0YbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Roboto Bold Italic"), local(Roboto-BoldItalic), url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC2fQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC44P5ICox8Kq3LLUNMylGO4.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC4bN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  src: local("Roboto Black Italic"), local(Roboto-BlackItalic), url(//fonts.gstatic.com/s/roboto/v18/bmC0pGMXrhphrZJmniIZpWfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/bmC0pGMXrhphrZJmniIZpY4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/bmC0pGMXrhphrZJmniIZpYbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Thin"), local(Roboto-Thin), url(//fonts.gstatic.com/s/roboto/v18/PP2U5prMl9yvKSWVu6DtvPesZW2xOQ-xsNqO47m55DA.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local(Roboto-Light), url(//fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUffY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Roboto), local(Roboto-Regular), url(//fonts.gstatic.com/s/roboto/v18/5YB-ifwqHP20Yn46l_BDhA.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local(Roboto-Medium), url(//fonts.gstatic.com/s/roboto/v18/RxZJdnzeo3R5zSexge8UUfY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local(Roboto-Bold), url(//fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOPY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local(Roboto-Black), url(//fonts.gstatic.com/s/roboto/v18/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"), url(//fonts.gstatic.com/s/roboto/v18/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v18/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic-ext");
+
 html {
   width: 100%;
 }
@@ -9,9 +94,9 @@ body {
   border: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-family: inherit;
   text-align: left;
   vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -81,6 +166,151 @@ textarea:active {
   .container {
     width: 1170px;
   }
+}
+
+.header {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header__logo {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header__logo > img,
+.header__logo svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.header__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  width: -webkit-calc(100% - 220px);
+  width: calc(100% - 220px);
+  width: -moz-calc(100% - 220px);
+  padding-top: 24px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header__email {
+  position: relative;
+  float: left;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header__email:hover {
+  color: #1287d9;
+  text-decoration: underline;
+}
+
+.header__email:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 12px;
+  background-image: url("../img/icons/email-icon.png");
+  background-repeat: no-repeat;
+  left: 0;
+  margin-top: 6px;
+}
+
+.header__login {
+  position: relative;
+  float: left;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header__login:hover {
+  color: #1287d9;
+  text-decoration: underline;
+}
+
+.header__login:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icons/home-icon.png");
+  background-repeat: no-repeat;
+  left: 0;
+  margin-top: 4px;
+}
+
+.header__reg {
+  position: relative;
+  float: left;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header__reg:hover {
+  color: #1287d9;
+  text-decoration: underline;
+}
+
+.header__add {
+  position: relative;
+  float: left;
+  width: 175px;
+  height: 41px;
+  background-color: #1287d9;
+  border: 1px solid #1287d9;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.header__add:hover {
+  color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1287d9), to(#0e53b0));
+  background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: -o-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
 }
 
 /*# sourceMappingURL=styles.min.css.map */

@@ -1,0 +1,125 @@
+.header {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+
+  &__logo {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 45px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    > img, svg {
+      size: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__elements {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(center);
+    position: relative;
+    float: left;
+    width: calc(100% - 220px);
+    width: -moz-calc(100% - 220px);
+    padding-top: 24px;
+    padding-bottom: 20px;
+    @include box-sizing(border-box);
+  }
+
+  &__email {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 21px;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 12px;
+      background-image: url('../img/icons/email-icon.png');
+      background-repeat: no-repeat;
+      left: 0;
+      margin-top: 6px;
+    }
+  }
+
+  &__login {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 21px;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 14px;
+      background-image: url('../img/icons/home-icon.png');
+      background-repeat: no-repeat;
+      left: 0;
+      margin-top: 4px;
+    }
+  }
+
+  &__reg {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+  }
+
+  &__add {
+    position: relative;
+    float: left;
+    width: 175px;
+    height: 41px;
+    background-color: #1287d9;
+    border: 1px solid #1287d9;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+
+    &:hover {
+      color: white;
+      background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+    }
+  }
+}

@@ -1,0 +1,200 @@
+.header {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+
+  &__logo {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 45px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    > img, svg {
+      size: 100%;
+      object-fit: contain;
+    }
+
+    @include breakpoint(max-width 1024px) {
+      margin-left: calc(50% - (200px/2));
+      margin-left: -moz-calc(50% - (200px/2));
+    }
+  }
+
+  &__elements {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: calc(100% - 220px);
+    width: -moz-calc(100% - 220px);
+    padding-top: 24px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    @include box-sizing(border-box);
+
+    @include breakpoint(max-width 1024px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__email {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 21px;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 12px;
+      background-image: url('../img/icons/email-icon.png');
+      background-repeat: no-repeat;
+      left: 0;
+      margin-top: 6px;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social-link {
+    position: relative;
+    float: left;
+    width: 19px;
+    height: 18px;
+    margin: 0 4px;
+
+    &.vk {
+      background-image: url('../img/icons/social-vk-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.fb {
+      background-image: url('../img/icons/social-fb-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.tw {
+      background-image: url('../img/icons/social-tw-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.gplus {
+      background-image: url('../img/icons/social-g-icon.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__login {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 21px;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 14px;
+      background-image: url('../img/icons/home-icon.png');
+      background-repeat: no-repeat;
+      left: 0;
+      margin-top: 4px;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__reg {
+    position: relative;
+    float: left;
+    color: #313844;
+    font-size: 16px;
+    font-weight: 400;
+    @include box-sizing(border-box);
+
+    &:hover {
+      color: #1287d9;
+      text-decoration: underline;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__add {
+    position: relative;
+    float: left;
+    width: 175px;
+    height: 41px;
+    background-color: #1287d9;
+    border: 1px solid #1287d9;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+
+    &:hover {
+      color: white;
+      background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.info {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  h3 {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #323945;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__elements {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  &__element {
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 60px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+
+
+
+
+    //img:before {
+    //  position: relative;
+    //  background-color: blueviolet;
+    //}
+
+    p {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #323945;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-top: -80px;
+    }
+
+  }
+
+  //&__element:before {
+  //  content: ' \25CF';
+  //  font-size: 200px;
+  //  color: #f6f6f6;
+  //
+  //}
+
+}

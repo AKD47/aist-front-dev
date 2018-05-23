@@ -18,6 +18,11 @@
       size: 100%;
       object-fit: contain;
     }
+
+    @include breakpoint(max-width 1024px) {
+      margin-left: calc(50% - (200px/2));
+      margin-left: -moz-calc(50% - (200px/2));
+    }
   }
 
   &__elements {
@@ -34,6 +39,17 @@
     padding-bottom: 20px;
     padding-left: 40px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 1024px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__email {
@@ -61,6 +77,10 @@
       left: 0;
       margin-top: 6px;
     }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__social {
@@ -70,6 +90,10 @@
     @include justify-content(center);
     position: relative;
     float: left;
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__social-link {
@@ -125,6 +149,10 @@
       left: 0;
       margin-top: 4px;
     }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__reg {
@@ -138,6 +166,10 @@
     &:hover {
       color: #1287d9;
       text-decoration: underline;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
     }
   }
 
@@ -159,6 +191,10 @@
     &:hover {
       color: white;
       background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
     }
   }
 }

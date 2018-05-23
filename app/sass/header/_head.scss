@@ -131,6 +131,7 @@
     font-size: 16px;
     font-weight: 400;
     padding-left: 21px;
+    text-transform: capitalize;
     @include box-sizing(border-box);
 
     &:hover {
@@ -161,6 +162,7 @@
     color: #313844;
     font-size: 16px;
     font-weight: 400;
+    text-transform: capitalize;
     @include box-sizing(border-box);
 
     &:hover {

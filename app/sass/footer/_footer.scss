@@ -1,0 +1,120 @@
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+
+  &__nav {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      float: left;
+      margin: 0 34px;
+
+      @include breakpoint(max-width 1024px) {
+        margin: 0 14px;
+      }
+
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      a {
+        position: relative;
+        float: left;
+        width: 100%;
+        text-transform: uppercase;
+        color: #313844;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover {
+          color: #1281d4;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    li:first-of-type {
+      margin-left: 0;
+    }
+
+    li:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__box {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    .header__logo {
+      order: 1;
+
+      @include breakpoint(max-width 1024px) {
+        order: 2;
+      }
+    }
+
+    .header__elements {
+      order: 2;
+
+      @include breakpoint(max-width 1024px) {
+        order: 1;
+      }
+    }
+
+  }
+  
+  &__art {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #efefef;
+  }
+
+  &__art-wrapper {
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 100%;
+
+    img {
+      margin: 10px auto;
+    }
+
+    p:first-of-type {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #1287d9;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    p:last-of-type {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #1287d9;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

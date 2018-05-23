@@ -25,12 +25,14 @@
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include align-items(center);
+    @include justify-content(space-between);
     position: relative;
     float: left;
     width: calc(100% - 220px);
     width: -moz-calc(100% - 220px);
     padding-top: 24px;
     padding-bottom: 20px;
+    padding-left: 40px;
     @include box-sizing(border-box);
   }
 
@@ -58,6 +60,43 @@
       background-repeat: no-repeat;
       left: 0;
       margin-top: 6px;
+    }
+  }
+
+  &__social {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+  }
+
+  &__social-link {
+    position: relative;
+    float: left;
+    width: 19px;
+    height: 18px;
+    margin: 0 4px;
+
+    &.vk {
+      background-image: url('../img/icons/social-vk-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.fb {
+      background-image: url('../img/icons/social-fb-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.tw {
+      background-image: url('../img/icons/social-tw-icon.png');
+      background-repeat: no-repeat;
+    }
+
+    &.gplus {
+      background-image: url('../img/icons/social-g-icon.png');
+      background-repeat: no-repeat;
     }
   }
 

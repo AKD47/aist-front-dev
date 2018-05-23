@@ -3,13 +3,17 @@
   float: left;
   width: 100%;
   min-height: 320px;
-  height: 70vh;
+  height: 80vh;
   background-image: url('../img/main-banner.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 20%;
   background-attachment: fixed;
+
+  @include breakpoint(max-width 700px) {
+    height: auto;
+  }
 
   &__form {
     @include display-flex(flex);
@@ -25,12 +29,20 @@
     padding: 10px 12px;
     @include box-sizing(border-box);
 
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(row);
+    }
+
     &--from {
       flex: 1;
       height: 41px;
       position: relative;
       float: left;
       margin-right: 8px;
+
+      @include breakpoint(max-width 700px) {
+        margin-right: 0;
+      }
 
       &:before {
         display: block;
@@ -52,6 +64,7 @@
       flex: 1;
       position: relative;
       float: left;
+      height: 41px;
       margin-right: 8px;
 
       &:before {
@@ -74,6 +87,7 @@
       flex: 1;
       position: relative;
       float: left;
+      height: 41px;
       margin-right: 8px;
 
       &:before {
@@ -126,6 +140,34 @@
         background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
       }
     }
+  }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black, 0 0 1em #0e53b0;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    //margin-bottom: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black, 0 0 1em #0e53b0;
   }
 }
 

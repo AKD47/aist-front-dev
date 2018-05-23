@@ -1,0 +1,104 @@
+.offers {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #efefef;
+  display: block;
+
+
+  >h3 {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #323945;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  &__elements {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  &__element {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  &__text_1 {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #1184d6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text_2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #1184d6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  &__photo {
+    position: relative;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #1184d6;
+    border-bottom: 1px solid #1184d6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__link {
+    position: relative;
+    float: left;
+    width: 175px;
+    height: 41px;
+    background-color: #1287d9;
+    border: 1px solid #1287d9;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-left: 130px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+    &:hover {
+      color: white;
+      background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: white;
+    }
+
+  }
+}

@@ -131,6 +131,21 @@
       @include box-sizing(border-box);
     }
 
+    &--list {
+      display: block;
+      position: absolute;
+      width: 100%;
+      list-style: none;
+      background-color: rgba(255,255,255,0.75);
+      border-radius: 2px;
+      left: 0;
+      margin-top: 54px;
+      padding: 10px;
+      @include box-sizing(border-box);
+      z-index: 1;
+    }
+    
+
     &--submit {
       flex: 1;
       position: relative;

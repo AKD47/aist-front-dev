@@ -5,74 +5,87 @@
   background-color: #efefef;
   display: block;
 
-
-  >h3 {
+  &__title {
     position: relative;
     float: left;
     width: 100%;
     color: #323945;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 18px;
-    text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 32px;
   }
 
   &__elements {
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 56px;
   }
 
   &__element {
     position: relative;
     float: left;
     width: 50%;
-    padding-left: 58px;
-    padding-right: 58px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    @include breakpoint(max-width 700px) {
+      padding: 0;
+    }
+
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #1184d6;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 10px;
+    }
   }
 
-  &__text_1 {
-    position: relative;
-    float: left;
-    width: 100%;
-    color: #1184d6;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 18px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  &__element:nth-of-type(even) {
+
+    .offers__element--title {
+      text-align: right;
+    }
   }
 
-  &__text_2 {
-    position: relative;
-    float: left;
-    width: 100%;
-    color: #1184d6;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 18px;
-    text-transform: uppercase;
-    text-align: right;
-    margin-bottom: 10px;
+  &__element:nth-of-type(odd) {
+
+    .offers__element--title {
+      text-align: left;
+    }
   }
 
   &__photo {
     position: relative;
     float: left;
     width: 100%;
+    height: 244px;
+    overflow: hidden;
     border-top: 1px solid #1184d6;
     border-bottom: 1px solid #1184d6;
     padding-top: 10px;
     padding-bottom: 10px;
+    @include box-sizing(border-box);
+
+    > img, svg {
+      size: 100%;
+      object-fit: cover;
+    }
   }
 
   &__link {
     position: relative;
     float: left;
-    width: 175px;
+    width: 176px;
     height: 41px;
     background-color: #1287d9;
     border: 1px solid #1287d9;
@@ -83,7 +96,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 40px;
-    margin-left: 130px;
+    margin-left: calc(50% - (176px / 2));
+    margin-left: -moz-calc(50% - (176px / 2));
     margin-bottom: 10px;
     margin-top: 30px;
 
@@ -95,10 +109,5 @@
     @include breakpoint(max-width 700px) {
       margin-bottom: 10px;
     }
-
-    a {
-      color: white;
-    }
-
   }
 }

@@ -5,32 +5,6 @@ html
 
     body
         include ../header
-
-        section.registration
-
-            .container
-                form.registration__margins
-                    h3.registration__title Регистрация нового
-                    h3.registration__title пользователя
-                    h3.registration__subtitle Для регистрации заполните поля ниже:
-                    input(type='text' name='name' placeholder='Имя').registration__margin
-                    input(type='text' name='surname' placeholder='Фамилия').registration__margin
-                    input(type='text' name='login' placeholder='Логин').registration__margin
-                    input(type='text' name='e-mail' placeholder='Ваш E-mail').registration__margin
-                    input(type='password' name='password' placeholder='Пароль').registration__margin
-                    input(type='password' name='password' placeholder='Пароль еще раз').registration__margin
-
-                    h3.registration__linktitle Регистрация через социальные сети:
-                    .registration__social
-                        a(href='#').registration__social--link.vk
-                        a(href='#').registration__social--link.fb
-
-                    .registration__agreement
-                        input(type='checkbox' name='a' value='Соглашение с условиями сервиса')
-                        a(href='#') Соглашение с условиями сервиса
-
-                    input(type='submit' value='Зарегистрироваться').registration__button
-
-
+        include ../reg
         include ../footer
         include ../html_close

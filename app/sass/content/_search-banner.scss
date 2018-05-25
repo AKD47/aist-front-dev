@@ -25,7 +25,7 @@
     margin-top: 172px;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.9);
     padding: 10px 12px;
     @include box-sizing(border-box);
 
@@ -136,13 +136,47 @@
       position: absolute;
       width: 100%;
       list-style: none;
-      background-color: rgba(255,255,255,0.75);
+      background-color: #fff;
       border-radius: 2px;
       left: 0;
       margin-top: 54px;
       padding: 10px;
       @include box-sizing(border-box);
       z-index: 1;
+
+      li {
+        position: relative;
+        float: left;
+        width: 100%;
+
+        a {
+          position: relative;
+          float: left;
+          width: 100%;
+          padding-top: 17px;
+          padding-bottom: 10px;
+          @include box-sizing(border-box);
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #313844;
+          font-size: 16px;
+          font-weight: 400;
+          border-bottom: 1px solid #1287d9;
+
+          &:hover {
+            color: #1287d9;
+          }
+        }
+      }
+
+      li:last-of-type {
+
+        a {
+          border-bottom: none;
+        }
+      }
     }
     
 
@@ -198,5 +232,6 @@
   }
 }
 
-
-
+.datepicker--pointer {
+  display: none;
+}

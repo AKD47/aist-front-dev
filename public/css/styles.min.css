@@ -455,7 +455,7 @@ textarea:active {
   margin-top: 172px;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px 12px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -583,7 +583,7 @@ textarea:active {
   position: absolute;
   width: 100%;
   list-style: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: #fff;
   border-radius: 2px;
   left: 0;
   margin-top: 54px;
@@ -591,6 +591,39 @@ textarea:active {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 1;
+}
+
+.search-banner__form--list li {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.search-banner__form--list li a {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 1px solid #1287d9;
+}
+
+.search-banner__form--list li a:hover {
+  color: #1287d9;
+}
+
+.search-banner__form--list li:last-of-type a {
+  border-bottom: none;
 }
 
 .search-banner__form--submit {
@@ -647,6 +680,10 @@ textarea:active {
   text-shadow: 1px 1px 2px black, 0 0 1em #0e53b0;
 }
 
+.datepicker--pointer {
+  display: none;
+}
+
 .info {
   position: relative;
   float: left;
@@ -661,25 +698,82 @@ textarea:active {
   font-size: 22px;
   font-weight: 400;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 32px;
 }
 
 .info__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
   float: left;
   width: 100%;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 700px) {
+  .info__elements {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 .info__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   float: left;
-  width: 25%;
-  text-align: center;
-  padding-left: 30px;
-  padding-top: 60px;
-  padding-right: 30px;
-  padding-bottom: 60px;
+  width: -webkit-calc(25% - 25px);
+  width: calc(25% - 25px);
+  width: -moz-calc(25% - 25px);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .info__element {
+    width: 100%;
+  }
+}
+
+.info__element--icon {
+  position: relative;
+  float: left;
+  width: 66px;
+  height: 45px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.info__element--icon > img,
+.info__element--icon svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .info__element p {
@@ -690,8 +784,7 @@ textarea:active {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  margin-top: -80px;
-  font-family: 'Roboto';
+  text-align: center;
 }
 
 .services {

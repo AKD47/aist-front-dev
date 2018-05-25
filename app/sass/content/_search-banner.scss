@@ -3,13 +3,17 @@
   float: left;
   width: 100%;
   min-height: 320px;
-  height: 70vh;
+  height: 80vh;
   background-image: url('../img/main-banner.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 20%;
   background-attachment: fixed;
+
+  @include breakpoint(max-width 700px) {
+    height: auto;
+  }
 
   &__form {
     @include display-flex(flex);
@@ -21,9 +25,14 @@
     margin-top: 172px;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.9);
     padding: 10px 12px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      margin-top: 40px;
+    }
 
     &--from {
       flex: 1;
@@ -31,6 +40,11 @@
       position: relative;
       float: left;
       margin-right: 8px;
+
+      @include breakpoint(max-width 700px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 
       &:before {
         display: block;
@@ -52,7 +66,13 @@
       flex: 1;
       position: relative;
       float: left;
+      height: 41px;
       margin-right: 8px;
+
+      @include breakpoint(max-width 700px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 
       &:before {
         display: block;
@@ -74,7 +94,13 @@
       flex: 1;
       position: relative;
       float: left;
+      height: 41px;
       margin-right: 8px;
+
+      @include breakpoint(max-width 700px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 
       &:before {
         display: block;
@@ -105,6 +131,55 @@
       @include box-sizing(border-box);
     }
 
+    &--list {
+      display: block;
+      position: absolute;
+      width: 100%;
+      list-style: none;
+      background-color: #fff;
+      border-radius: 2px;
+      left: 0;
+      margin-top: 54px;
+      padding: 10px;
+      @include box-sizing(border-box);
+      z-index: 1;
+
+      li {
+        position: relative;
+        float: left;
+        width: 100%;
+
+        a {
+          position: relative;
+          float: left;
+          width: 100%;
+          padding-top: 17px;
+          padding-bottom: 10px;
+          @include box-sizing(border-box);
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #313844;
+          font-size: 16px;
+          font-weight: 400;
+          border-bottom: 1px solid #1287d9;
+
+          &:hover {
+            color: #1287d9;
+          }
+        }
+      }
+
+      li:last-of-type {
+
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+    
+
     &--submit {
       flex: 1;
       position: relative;
@@ -127,7 +202,36 @@
       }
     }
   }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black, 0 0 1em #0e53b0;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    //margin-bottom: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black, 0 0 1em #0e53b0;
+  }
 }
 
-
-
+.datepicker--pointer {
+  display: none;
+}

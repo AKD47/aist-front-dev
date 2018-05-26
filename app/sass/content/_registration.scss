@@ -1,129 +1,161 @@
-.registration {
+.reg {
   position: relative;
   float: left;
   width: 100%;
-  background-image: url(../img/main-banner.png);
-  background-repeat: no-repeat;
-  background-position: 50% 20%;
-  background-attachment: fixed;
+  background-color: #fff;
 
   &__title {
     position: relative;
     float: left;
     width: 100%;
-    color: #000000;
-    font-size: 30px;
+    color: #323945;
+    font-size: 36px;
     font-weight: 400;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 50px;
+    margin-bottom: 32px;
   }
 
   &__subtitle {
     position: relative;
     float: left;
     width: 100%;
-    color: #000000;
+    color: #323945;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 
-  &__margins {
+  &__form {
     position: relative;
     float: left;
-    width: 30%;
-    margin-left: 400px;
+    width: 500px;
+    margin-left: calc(50% - (500px / 2));
+    margin-left: -moz-calc(50% - (500px / 2));
     margin-bottom: 25px;
     margin-top: 25px;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-  }
+    background-color: rgba(49, 56, 68, 0.35);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    @include box-sizing(border-box);
 
-  &__margin {
-    position: relative;
-    float: left;
-    width: 90%;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 15px;
-    padding-left: 10px;
-    background-color: white;
-    border: 1px solid #1287d9;
-    border-radius: 2px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    @include breakpoint(max-width 500px) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &--field {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 41px;
+      border: 1px solid #1287d9;
+      border-radius: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      @include box-sizing(border-box);
+      margin-bottom: 20px;
+      color: #323945;
+      font-size: 16px;
+    }
+
+    &--submit {
+      position: relative;
+      float: left;
+      width: 210px;
+      height: 41px;
+      margin-left: calc(50% - (210px / 2));
+      margin-left: -moz-calc(50% - (210px / 2));
+      margin-bottom: 20px;
+      background-color: #1287d9;
+      border: 1px solid #1287d9;
+      border-radius: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 40px;
+
+      &:hover {
+        color: white;
+        background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+      }
+    }
+
+    &--link {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #323945;
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 21px;
+      @include box-sizing(border-box);
+
+      &:hover {
+        color: #1287d9;
+        text-decoration: underline;
+      }
+    }
   }
 
   &__linktitle {
     position: relative;
     float: left;
     width: 100%;
-    color: #000000;
+    color: #323945;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 
   &__social {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
     position: relative;
     float: left;
     width: 100%;
     text-align: center;
-    margin-left: 137px;
-  }
 
-  &__social--link {
-    position: relative;
-    float: left;
-    width: 19px;
-    height: 18px;
-    margin: 0 4px;
+    &--link {
+      position: relative;
+      float: left;
+      width: 30px;
+      height: 30px;
+      margin: 0 4px;
 
-    &.vk {
-      background-image: url('../img/icons/social-vk-icon.png');
-      background-repeat: no-repeat;
+      .fa {
+        font-size: 28px;
+        color: #323945;
+      }
     }
-
-    &.fb {
-      background-image: url('../img/icons/social-fb-icon.png');
-      background-repeat: no-repeat;
-    }
-
   }
 
   &__agreement {
     position: relative;
     float: left;
     width: 100%;
-    margin-left: 25px;
-    font-size: 17px;
+    margin-left: 0;
+    text-align: justify;
+    color: #323945;
+    font-weight: 400;
+    font-size: 14px;
     margin-bottom: 5px;
     margin-top: 5px;
-  }
 
-  &__button {
-    flex: 1;
-    position: relative;
-    float: left;
-    height: 41px;
-    border: none;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 40px;
-    cursor: pointer;
-    background-color: #1287d9;
-    border-radius: 2px;
-    margin-left: 65px;
-
-    &:hover {
-      color: white;
-      background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);}
+    a {
+      color: #1287d9;
+    }
   }
 }

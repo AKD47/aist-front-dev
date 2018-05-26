@@ -1,25 +1,34 @@
-section.registration
+section.reg
 
     .container
-        form.registration__margins
-            h3.registration__title Регистрация нового
-            h3.registration__title пользователя
-            h3.registration__subtitle Для регистрации заполните поля ниже:
-            input(type='text' name='name' placeholder='Имя').registration__margin
-            input(type='text' name='surname' placeholder='Фамилия').registration__margin
-            input(type='text' name='login' placeholder='Логин').registration__margin
-            input(type='text' name='e-mail' placeholder='Ваш E-mail').registration__margin
-            input(type='password' name='password' placeholder='Пароль').registration__margin
-            input(type='password' name='password' placeholder='Пароль еще раз').registration__margin
 
-            h3.registration__linktitle Регистрация через социальные сети:
-            .registration__social
-                a(href='#').registration__social--link.vk
-                a(href='#').registration__social--link.fb
+        h1.reg__title Регистрация нового пользователя
 
-            .registration__agreement
-                input(type='checkbox' name='a' value='Соглашение с условиями сервиса')
-                a(href='#') Соглашение с условиями сервиса
+        h3.reg__subtitle Для регистрации заполните поля ниже:
 
-            input(type='submit' value='Зарегистрироваться').registration__button
+        form.reg__form
+
+            input(type='text' name='e-mail' placeholder='Ваш E-mail').reg__form--field
+
+            input(type='password' name='password' placeholder='Пароль').reg__form--field
+
+            input(type='submit' value='Зарегистрироваться').reg__form--submit
+
+            a(href='#').reg__form--link Уже есть аккаунт - войдите
+
+            h3.reg__linktitle Вход через социальные сети:
+
+            .reg__social
+                a(href='#').reg__social--link
+                    i.fa.fa-vk
+                a(href='#').reg__social--link
+                    i.fa.fa-facebook-square
+
+
+            p.reg__agreement Реєструючись или входя через социальные сети, Ви принимаете наши
+                a(href='#')  Условия пользованиея
+                a(href='#')  и Политику конфеденциальности.
+
+
+
 

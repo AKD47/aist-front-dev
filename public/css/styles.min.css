@@ -308,29 +308,18 @@ textarea:active {
 .header__social-link {
   position: relative;
   float: left;
-  width: 19px;
-  height: 18px;
   margin: 0 4px;
 }
 
-.header__social-link.vk {
-  background-image: url("../img/icons/social-vk-icon.png");
-  background-repeat: no-repeat;
+.header__social-link .fa {
+  font-size: 18px;
+  color: #313844;
 }
 
-.header__social-link.fb {
-  background-image: url("../img/icons/social-fb-icon.png");
-  background-repeat: no-repeat;
-}
-
-.header__social-link.tw {
-  background-image: url("../img/icons/social-tw-icon.png");
-  background-repeat: no-repeat;
-}
-
-.header__social-link.gplus {
-  background-image: url("../img/icons/social-g-icon.png");
-  background-repeat: no-repeat;
+@media (max-width: 770px) {
+  .header__social-link .fa {
+    font-size: 30px;
+  }
 }
 
 .header__login {
@@ -897,6 +886,8 @@ textarea:active {
 @media (max-width: 700px) {
   .offers__element {
     padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -978,139 +969,184 @@ textarea:active {
   }
 }
 
-.registration {
+.reg {
   position: relative;
   float: left;
   width: 100%;
-  background-image: url(../img/main-banner.png);
-  background-repeat: no-repeat;
-  background-position: 50% 20%;
-  background-attachment: fixed;
+  background-color: #fff;
 }
 
-.registration__title {
+.reg__title {
   position: relative;
   float: left;
   width: 100%;
-  color: #000000;
-  font-size: 30px;
+  color: #323945;
+  font-size: 36px;
   font-weight: 400;
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 50px;
+  margin-bottom: 32px;
 }
 
-.registration__subtitle {
+.reg__subtitle {
   position: relative;
   float: left;
   width: 100%;
-  color: #000000;
+  color: #323945;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
-.registration__margins {
+.reg__form {
   position: relative;
   float: left;
-  width: 30%;
-  margin-left: 400px;
+  width: 500px;
+  margin-left: -webkit-calc(50% - 250px);
+  margin-left: calc(50% - 250px);
+  margin-left: -moz-calc(50% - 250px);
   margin-bottom: 25px;
   margin-top: 25px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  background-color: rgba(49, 56, 68, 0.35);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.registration__margin {
+@media (max-width: 500px) {
+  .reg__form {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.reg__form--field {
   position: relative;
   float: left;
-  width: 90%;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 15px;
-  padding-left: 10px;
-  background-color: white;
+  width: 100%;
+  height: 41px;
   border: 1px solid #1287d9;
   border-radius: 2px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  color: #323945;
+  font-size: 16px;
 }
 
-.registration__linktitle {
+.reg__form--submit {
   position: relative;
   float: left;
-  width: 100%;
-  color: #000000;
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.registration__social {
-  position: relative;
-  float: left;
-  width: 100%;
-  text-align: center;
-  margin-left: 137px;
-}
-
-.registration__social--link {
-  position: relative;
-  float: left;
-  width: 19px;
-  height: 18px;
-  margin: 0 4px;
-}
-
-.registration__social--link.vk {
-  background-image: url("../img/icons/social-vk-icon.png");
-  background-repeat: no-repeat;
-}
-
-.registration__social--link.fb {
-  background-image: url("../img/icons/social-fb-icon.png");
-  background-repeat: no-repeat;
-}
-
-.registration__agreement {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-left: 25px;
-  font-size: 17px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.registration__button {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  position: relative;
-  float: left;
+  width: 210px;
   height: 41px;
-  border: none;
+  margin-left: -webkit-calc(50% - 105px);
+  margin-left: calc(50% - 105px);
+  margin-left: -moz-calc(50% - 105px);
+  margin-bottom: 20px;
+  background-color: #1287d9;
+  border: 1px solid #1287d9;
+  border-radius: 2px;
   text-align: center;
   text-transform: uppercase;
   color: white;
   font-size: 16px;
   font-weight: 400;
   line-height: 40px;
-  cursor: pointer;
-  background-color: #1287d9;
-  border-radius: 2px;
-  margin-left: 65px;
 }
 
-.registration__button:hover {
+.reg__form--submit:hover {
   color: white;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1287d9), to(#0e53b0));
   background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
   background-image: -o-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
   background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+}
+
+.reg__form--link {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #323945;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.reg__form--link:hover {
+  color: #1287d9;
+  text-decoration: underline;
+}
+
+.reg__linktitle {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #323945;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.reg__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.reg__social--link {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}
+
+.reg__social--link .fa {
+  font-size: 28px;
+  color: #323945;
+}
+
+.reg__agreement {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  text-align: justify;
+  color: #323945;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.reg__agreement a {
+  color: #1287d9;
 }
 
 .authorization {

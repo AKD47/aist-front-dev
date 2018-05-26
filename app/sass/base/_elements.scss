@@ -1,0 +1,116 @@
+.pagination {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 68px;
+
+  ul {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      float: left;
+
+      a {
+        position: relative;
+        float: left;
+        width: 44px;
+        height: 21px;
+        margin: 10px 2px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        background-color: #313844;
+        border: 1px solid #313844;
+
+        &:hover {
+          color: white;
+          background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+          border: 1px solid #1287d9;
+        }
+      }
+    }
+
+    li.active {
+
+      a {
+        color: white;
+        background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+        border: 1px solid #1287d9;
+      }
+    }
+
+    li.prev {
+
+      a:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 9px;
+        height: 12px;
+        background-image: url('../img/icons/pag-prev-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    li.prev.disabled {
+
+      a {
+        background-color: #626873;
+        border: 1px solid #626873;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    li.next {
+
+      a:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 9px;
+        height: 12px;
+        background-image: url('../img/icons/pag-next-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    li.next.disabled {
+
+      a {
+        background-color: #626873;
+        border: 1px solid #626873;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}

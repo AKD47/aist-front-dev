@@ -1,0 +1,23 @@
+doctype html
+html
+    head(lang='en')
+        include ../html_open
+
+    body
+        include ../header
+        section.reg
+
+            .container
+
+                h1.reg__title Восстановление пароля
+
+                h3.reg__subtitle Заполните поля ниже:
+
+                form.reg__form
+
+                    input(type='text' name='e-mail' placeholder='Ваш E-mail').reg__form--field
+
+                    input(type='submit' value='Сбросить').reg__form--submit
+
+        include ../footer
+        include ../html_close

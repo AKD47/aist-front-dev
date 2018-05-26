@@ -1,0 +1,36 @@
+doctype html
+html
+    head(lang='en')
+        include ../html_open
+
+    body
+        include ../header
+        section.reg
+
+            .container
+
+                h1.reg__title Вход в личный кабинет
+
+                h3.reg__subtitle Для входа заполните поля ниже:
+
+                form.reg__form
+
+                    input(type='text' name='e-mail' placeholder='Ваш E-mail').reg__form--field
+
+                    input(type='password' name='password' placeholder='Пароль').reg__form--field
+
+                    input(type='submit' value='Войти').reg__form--submit
+
+                    a(href='registration.html').reg__form--link Нет аккаунта - зарегистрируйтесь
+                    a(href='forgot.html').reg__form--link Забыли пароль ?
+
+                    h3.reg__linktitle Вход через социальные сети:
+
+                    .reg__social
+                        a(href='#').reg__social--link
+                            i.fa.fa-vk
+                        a(href='#').reg__social--link
+                            i.fa.fa-facebook-square
+
+        include ../footer
+        include ../html_close

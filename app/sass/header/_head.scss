@@ -61,7 +61,7 @@
     padding-left: 21px;
     @include box-sizing(border-box);
 
-    &:hover {
+    &:hover, &:active {
       color: #1287d9;
       text-decoration: underline;
     }
@@ -113,6 +113,13 @@
     }
   }
 
+  //&__social-link:hover, &__social-link:active {
+  //
+  //  .fa{
+  //    color: #1287d9;
+  //  }
+  //}
+
   &__login {
     position: relative;
     float: left;
@@ -154,7 +161,7 @@
     text-transform: capitalize;
     @include box-sizing(border-box);
 
-    &:hover {
+    &:hover, &:active {
       color: #1287d9;
       text-decoration: underline;
     }
@@ -179,7 +186,7 @@
     font-weight: 400;
     line-height: 40px;
 
-    &:hover {
+    &:hover, &:active {
       color: white;
       background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
     }

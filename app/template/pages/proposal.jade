@@ -1,0 +1,145 @@
+doctype html
+html
+    head(lang='en')
+        include ../html_open
+
+    body
+        include ../header
+        section.offers
+
+            .info__separator
+
+                .container
+
+                    h1.info__separator--title Мы созданы чтобы помогать людям!
+
+                    .info__separator--icon
+                        img(src='img/icons/white-logo-icon.png' )
+
+            .offers__wrapper
+
+                .container
+
+                    form.search-banner__form
+
+                        .search-banner__form--from
+                            input(type='text' name='from' placeholder='Откуда').search-banner__form--field
+
+                            ul.search-banner__form--list
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+
+                        .search-banner__form--to
+                            input(type='text' name='to' placeholder='Куда').search-banner__form--field
+
+                            ul.search-banner__form--list
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+                                li
+                                    a(href='#') Донецк, Донецкая народная Республика
+
+                        .search-banner__form--date
+                            input(type='text' name='' placeholder='Дата').search-banner__form--field
+
+                        input(type='submit' value='поиск').search-banner__form--submit
+
+                    .offers__box
+
+                        .offers__item
+
+                            h3 Пакет с вещами, не большой
+
+                            .offers__images
+                                .offers__carousel
+                                    a(href='img/cargo-banner.png' data-fancybox="gallery").offers__carousel--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    a(href='img/cargo-banner.png' data-fancybox="gallery").offers__carousel--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    a(href='img/cargo-banner.png' data-fancybox="gallery").offers__carousel--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    a(href='img/cargo-banner.png' data-fancybox="gallery").offers__carousel--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    a(href='img/cargo-banner.png' data-fancybox="gallery").offers__carousel--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+
+                                .offers__nav
+                                    .offers__nav--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    .offers__nav--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    .offers__nav--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    .offers__nav--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+                                    .offers__nav--slide
+                                        img(src='img/cargo-banner.png' alt='img')
+
+                            .offers__item--descr
+
+                                .offers__item--from.from Откуда везти:
+                                    span.value  Москва, Московская область
+                                .offers__item--from.from Куда везти:
+                                    span.value  Севастополь, Крым
+                                .offers__item--from.final-date Срок доставки:
+                                    span.value  до 30.06.2018
+
+                                span.offers__item--about-title описание:
+                                p.offers__item--about Вес пакета около 8 кг. Выберу по отзывам иполнителя Вес пакета около 8 кг. Выберу по отзывам иполнителя Вес пакета около 8 кг. Выберу по отзывам иполнителя
+
+                                .offers__item--from.date Дата последнего исправления:
+                                    span.value  30.06.2018
+
+                            .offers__item--status
+
+                                .offers__item--price бюджет:
+                                    span.value  2500 руб
+
+                                a(href='proposal.html').offers__item--more посмотреть
+
+
+
+                    .offers__box
+
+                        form.offers__resp-form#response-form
+
+                            h3 Оставить заявку:
+
+                            label.offers__resp-form--title Бюджет:
+
+                            input.offers__resp-form--field(minlength="1" maxlength="50" type="text" placeholder="Ваша цена")
+
+                            label.offers__resp-form--title Срок исполнения:
+
+                            input.offers__resp-form--field(minlength="6" maxlength="8" type="text" placeholder="Срок выполнения работы")
+
+                            label.offers__resp-form--title Дополнительно:
+
+                            textarea.offers__resp-form--text(minlength="10" maxlength="200" placeholder="Текст предложения (не более 200символов)")
+
+                            input.offers__resp-form--submit(type="submit" value="откликнуться")
+
+                        .offers__resp-form--notification
+
+                            h3 Как повысить шансы?
+
+                            ol
+                                li Снижайте бюджет
+                                li Указывайте минимальные, но выполнимые сроки
+                                li Указывайте свои приемущества
+                                li Имейте максимум положительных отзывов
+        include ../footer
+        include ../html_close

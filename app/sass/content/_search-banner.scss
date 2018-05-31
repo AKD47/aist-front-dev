@@ -165,7 +165,7 @@
           font-weight: 400;
           border-bottom: 1px solid #1287d9;
 
-          &:hover {
+          &:hover, &:active {
             color: #1287d9;
           }
         }
@@ -196,7 +196,7 @@
       background-color: #1287d9;
       border-radius: 2px;
 
-      &:hover {
+      &:hover, &:active, &:focus {
         color: white;
         background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
       }

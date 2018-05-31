@@ -81,4 +81,23 @@ $(document).ready(function () {
     });
     /*close datapicker*/
 
+    /*slider single proposal*/
+    $('.offers__carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.offers__nav'
+    });
+    $('.offers__nav').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.offers__carousel',
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        focusOnSelect: true
+    });
+    /*close slider single proposal*/
+
 });

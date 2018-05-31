@@ -33,6 +33,34 @@
 
 $(document).ready(function () {
 
+    /*search form list*/
+    $(document).on('input', '.search-banner__form--field', function () {
+        var list = $(this).next('.search-banner__form--list');
+        if( list.length != 0 && $(this).val().length > 1 ) {
+            list.css('display', 'block');
+        } else {
+            return false;
+        }
+    });
+
+    $(document).on('click', '.search-banner__form--list a', function (event) {
+        event.preventDefault();
+        var field = $(this).closest('.search-banner__form--list').prev('.search-banner__form--field'),
+            list = $(this).closest('.search-banner__form--list'),
+           value = $(this).text();
+        field.val(value);
+        list.css('display', 'none');
+        return false;
+    });
+
+
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.search-banner__form').length != 1) {
+            $('.search-banner__form--list').css('display', 'none');
+        }
+    });
+    /*close*/
+
 
     /*datapicker*/
     $('.search-banner__form .search-banner__form--date .search-banner__form--field').datepicker({
@@ -52,6 +80,5 @@ $(document).ready(function () {
 
     });
     /*close datapicker*/
-
 
 });

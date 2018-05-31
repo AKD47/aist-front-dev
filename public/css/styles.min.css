@@ -512,7 +512,8 @@ textarea:active {
 }
 
 .header__add:hover,
-.header__add:active {
+.header__add:active,
+.header__add:focus {
   color: white;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1287d9), to(#0e53b0));
   background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
@@ -1128,6 +1129,12 @@ textarea:active {
   box-sizing: border-box;
 }
 
+.offers__box .offers__resp-form--maintitle {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
 .offers__item {
   position: relative;
   float: left;
@@ -1333,8 +1340,8 @@ textarea:active {
   float: left;
   width: 100%;
   height: 41px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #1287d9;
   border: 1px solid #1287d9;
   border-radius: 2px;
@@ -1354,6 +1361,21 @@ textarea:active {
   background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
   background-image: -o-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
   background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+}
+
+.offers__item--more.complaint {
+  background-color: #e91818;
+  border: 1px solid #e91818;
+}
+
+.offers__item--more.complaint:hover,
+.offers__item--more.complaint:active,
+.offers__item--more.complaint:focus {
+  color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e91818), to(#ab1818));
+  background-image: -webkit-linear-gradient(bottom, #e91818 0%, #ab1818 100%);
+  background-image: -o-linear-gradient(bottom, #e91818 0%, #ab1818 100%);
+  background-image: linear-gradient(to top, #e91818 0%, #ab1818 100%);
 }
 
 .offers__images {
@@ -1454,7 +1476,7 @@ textarea:active {
   }
 }
 
-.offers__resp-form > h3 {
+.offers__resp-form--maintitle {
   position: relative;
   float: left;
   width: 100%;
@@ -1575,18 +1597,6 @@ textarea:active {
   }
 }
 
-.offers__resp-form--notification > h3 {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #1184d6;
-  font-size: 22px;
-  text-align: center;
-  font-weight: 400;
-}
-
 .offers__resp-form--notification > ol {
   position: relative;
   float: left;
@@ -1601,6 +1611,24 @@ textarea:active {
   color: #313844;
   font-size: 16px;
   font-weight: 400;
+}
+
+.offers__recall {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.offers__recall--name {
+  position: relative;
+  float: left;
+  width: 172px;
+}
+
+.offers__recall--name .cabinet__user-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .reg {
@@ -1785,6 +1813,96 @@ textarea:active {
 
 .reg__agreement a {
   color: #1287d9;
+}
+
+.cabinet {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cabinet__avatar {
+  position: relative;
+  float: left;
+  width: 172px;
+  height: 172px;
+  border: 1px solid #313844;
+  background-image: url("../img/icons/gray-logo-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cabinet__user-name {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #e39b65;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.cabinet__rating {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cabinet__rating--starts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cabinet__rating--starts .star {
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 19px;
+  margin-left: 3px;
+  margin-right: 3px;
+  background-image: url("../img/icons/empty-start-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.cabinet__rating--starts .star.fill-star {
+  background-image: url("../img/icons/fill-start-icon.png");
+}
+
+.cabinet__rating--val {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #373d49;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 33px;
+  margin-top: 15px;
+}
+
+.cabinet__rating--total {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #373d49;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .footer {

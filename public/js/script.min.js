@@ -100,4 +100,16 @@ $(document).ready(function () {
     });
     /*close slider single proposal*/
 
+    /*scroll to form*/
+    $(document).on('click', '.go-to', function (event) {
+        event.preventDefault();
+        var href = $(this).attr('href'),
+            target = $(href),
+            top = target.offset().top;
+        console.log( href );
+        $('html,body').animate({scrollTop: top}, 1000);
+        return false;
+    });
+    /*cose to form*/
+
 });

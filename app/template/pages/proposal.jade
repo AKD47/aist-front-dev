@@ -108,7 +108,9 @@ html
                                 .offers__item--price бюджет:
                                     span.value  2500 руб
 
-                                a(href='proposal.html').offers__item--more посмотреть
+                                a(href='#response-form').offers__item--more.go-to откликнуться
+                                a(href='#').offers__item--more В избранное
+                                a(href='#').offers__item--more.complaint пожаловаться
 
 
 
@@ -116,7 +118,7 @@ html
 
                         form.offers__resp-form#response-form
 
-                            h3 Оставить заявку:
+                            h3.offers__resp-form--maintitle Оставить заявку:
 
                             label.offers__resp-form--title Бюджет:
 
@@ -134,12 +136,36 @@ html
 
                         .offers__resp-form--notification
 
-                            h3 Как повысить шансы?
+                            h3.offers__resp-form--maintitle Как повысить шансы?
 
                             ol
                                 li Снижайте бюджет
                                 li Указывайте минимальные, но выполнимые сроки
                                 li Указывайте свои приемущества
                                 li Имейте максимум положительных отзывов
+
+                    .offers__box
+
+                        h3.offers__resp-form--maintitle Список всех откликнувшихся
+
+                        .offers__recall
+
+                            .offers__recall--name
+
+                                .cabinet__avatar
+
+                                .cabinet__user-name Иван Петров
+
+                                .cabinet__rating
+                                    .cabinet__rating--starts
+                                        span.star.fill-star
+                                        span.star.fill-star
+                                        span.star.fill-star
+                                        span.star
+                                        span.star
+                                    span.cabinet__rating--val 3,25
+                                    span.cabinet__rating--total (15 оценок)
+
+
         include ../footer
         include ../html_close

@@ -186,7 +186,7 @@
     font-weight: 400;
     line-height: 40px;
 
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
       color: white;
       background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
     }

@@ -1,0 +1,83 @@
+.cabinet {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__avatar {
+    position: relative;
+    float: left;
+    width: 172px;
+    height: 172px;
+    border: 1px solid #313844;
+    background-image: url('../img/icons/gray-logo-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__user-name {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #e39b65;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__rating {
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &--starts {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      position: relative;
+      float: left;
+      width: 100%;
+
+      .star {
+        position: relative;
+        float: left;
+        width: 20px;
+        height: 19px;
+        margin-left: 3px;
+        margin-right: 3px;
+        background-image: url('../img/icons/empty-start-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100%;
+        background-size: 100%;
+
+        &.fill-star {
+          background-image: url('../img/icons/fill-start-icon.png');
+        }
+      }
+    }
+
+    &--val {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      color: #373d49;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 33px;
+      margin-top: 15px;
+    }
+
+    &--total {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      color: #373d49;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

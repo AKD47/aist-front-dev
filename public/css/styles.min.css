@@ -1617,6 +1617,8 @@ textarea:active {
   position: relative;
   float: left;
   width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #1287d9;
 }
 
 .offers__recall--name {

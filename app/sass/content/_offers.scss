@@ -361,6 +361,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 40px;
+      @include box-sizing(border-box);
 
       &:hover, &:active, &:focus {
         color: white;
@@ -434,6 +435,11 @@
     margin-bottom: 10px;
     padding-right: 20px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      width: 100%;
+      padding: 0;
+    }
 
     &--slide {
       position: relative;
@@ -588,6 +594,8 @@
     float: left;
     width: 100%;
     margin-bottom: 30px;
+    padding-bottom: 10px;
+    @include box-sizing(border-box);
     border-bottom: 1px solid #1287d9;
 
     &--name {
@@ -595,10 +603,76 @@
       float: left;
       width: 172px;
 
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
+
+      .cabinet__avatar {
+        width: 120px;
+        height: 120px;
+        margin-left: calc(50% - (120px/2));
+        margin-left: -moz-calc(50% - (120px/2));
+
+        @include breakpoint(max-width 700px) {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
       .cabinet__user-name {
         margin-top: 5px;
         margin-bottom: 5px;
         text-align: center;
+        font-size: 16px;
+      }
+
+      .cabinet__rating--starts .star {
+        width: 15px;
+        height: 14px;
+      }
+
+      .cabinet__rating--val {
+        font-size: 22px;
+        line-height: 20px;
+        margin-top: 5px;
+      }
+    }
+
+    &--body {
+      position: relative;
+      float: left;
+      width: calc(100% - (172px + 250px));
+      width: -moz-calc(100% - (172px + 250px));
+
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
+
+      p {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #313844;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    &--tool {
+      position: relative;
+      float: left;
+      width: 250px;
+
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
+
+      .offers__item--more {
+        //width: auto;
+        padding-left: 5px;
+        padding-right: 5px;
       }
     }
   }

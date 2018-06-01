@@ -1354,6 +1354,8 @@ textarea:active {
   font-size: 16px;
   font-weight: 400;
   line-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .offers__item--more:hover,
@@ -1443,6 +1445,13 @@ textarea:active {
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .offers__nav {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .offers__nav--slide {
@@ -1621,6 +1630,9 @@ textarea:active {
   float: left;
   width: 100%;
   margin-bottom: 30px;
+  padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px solid #1287d9;
 }
 
@@ -1630,10 +1642,85 @@ textarea:active {
   width: 172px;
 }
 
+@media (max-width: 700px) {
+  .offers__recall--name {
+    width: 100%;
+  }
+}
+
+.offers__recall--name .cabinet__avatar {
+  width: 120px;
+  height: 120px;
+  margin-left: -webkit-calc(50% - 60px);
+  margin-left: calc(50% - 60px);
+  margin-left: -moz-calc(50% - 60px);
+}
+
+@media (max-width: 700px) {
+  .offers__recall--name .cabinet__avatar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .offers__recall--name .cabinet__user-name {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
+  font-size: 16px;
+}
+
+.offers__recall--name .cabinet__rating--starts .star {
+  width: 15px;
+  height: 14px;
+}
+
+.offers__recall--name .cabinet__rating--val {
+  font-size: 22px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.offers__recall--body {
+  position: relative;
+  float: left;
+  width: -webkit-calc(100% - 422px);
+  width: calc(100% - 422px);
+  width: -moz-calc(100% - 422px);
+}
+
+@media (max-width: 700px) {
+  .offers__recall--body {
+    width: 100%;
+  }
+}
+
+.offers__recall--body p {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.offers__recall--tool {
+  position: relative;
+  float: left;
+  width: 250px;
+}
+
+@media (max-width: 700px) {
+  .offers__recall--tool {
+    width: 100%;
+  }
+}
+
+.offers__recall--tool .offers__item--more {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .reg {

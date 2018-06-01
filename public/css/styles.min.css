@@ -1138,6 +1138,29 @@ textarea:active {
   text-transform: uppercase;
 }
 
+.offers__filter {
+  position: relative;
+  float: left;
+  width: 220px;
+}
+
+.offers__filter--form {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.offers__items-wrapper {
+  position: relative;
+  float: left;
+  width: -webkit-calc(100% - 220px);
+  width: calc(100% - 220px);
+  width: -moz-calc(100% - 220px);
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .offers__item {
   position: relative;
   float: left;

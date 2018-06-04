@@ -26,12 +26,7 @@
     <section class="offers">
       <div class="info__separator">
         <div class="container">
-          <h1 class="info__separator--title">Мы созданы чтобы помогать людям!</h1>
-          <div class="info__separator--icon"><img src="img/icons/white-logo-icon.png"></div>
-        </div>
-      </div>
-      <div class="offers__wrapper">
-        <div class="container">
+          <h1 class="info__separator--title">поиск заявок</h1>
           <form class="search-banner__form">
             <div class="search-banner__form--from">
               <input type="text" name="from" placeholder="Откуда" class="search-banner__form--field">
@@ -58,13 +53,33 @@
             </div>
             <input type="submit" value="поиск" class="search-banner__form--submit">
           </form>
+        </div>
+      </div>
+      <div class="offers__wrapper">
+        <div class="container">
           <div class="offers__box">
             <div class="offers__filter">
               <form id="offers-filter-form" class="offers__filter--form">
-                <label>Дата</label>
+                <label class="offers__filter--label">Дата</label>
                 <div class="search-banner__form--date">
-                  <input type="text" name="" placeholder="Дата" class="search-banner__form--field">
+                  <input type="text" name="date" placeholder="Дата" class="search-banner__form--field">
                 </div>
+                <label class="offers__filter--label">Бюджет, ₽</label>
+                <label for="price" class="offers__filter--price-from">от:
+                  <input type="text" selprice="0" name="minPrice" value="0" id="price" maxlength="10" class="offers__filter--price-field">
+                </label>
+                <label for="price2" class="offers__filter--price-from">до:
+                  <input type="text" selprice="20000" name="maxPrice" value="20000" id="price2" maxlength="10" class="offers__filter--price-field">
+                </label>
+                <div id="slider_price" class="offers__filter--slider"></div>
+                <label class="offers__filter--label">Вес, кг</label>
+                <label for="weight" class="offers__filter--price-from">от:
+                  <input type="text" weight="0" name="minWeight" value="0" id="weight" maxlength="10" class="offers__filter--price-field">
+                </label>
+                <label for="weight2" class="offers__filter--price-from">до:
+                  <input type="text" weight="200" name="maxWeight" value="200" id="weight2" maxlength="10" class="offers__filter--price-field">
+                </label>
+                <div id="slider_weight" class="offers__filter--slider"></div>
               </form>
             </div>
             <div class="offers__items-wrapper">
@@ -78,7 +93,8 @@
                   <div class="offers__item--from date">Дата последнего исправления:<span class="value"> 30.06.2018</span></div>
                 </div>
                 <div class="offers__item--status">
-                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a>
+                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div>
+                  <div class="offers__item--rew">откликов:<span class="value"> 12</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a><a href="#" class="offers__item--favorite to-favorite"></a>
                 </div>
               </div>
               <div class="offers__item">
@@ -91,7 +107,8 @@
                   <div class="offers__item--from date">Дата последнего исправления:<span class="value"> 30.06.2018</span></div>
                 </div>
                 <div class="offers__item--status">
-                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a>
+                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div>
+                  <div class="offers__item--rew">откликов:<span class="value"> 12</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a><a href="#" class="offers__item--favorite"></a>
                 </div>
               </div>
               <div class="offers__item">
@@ -104,7 +121,8 @@
                   <div class="offers__item--from date">Дата последнего исправления:<span class="value"> 30.06.2018</span></div>
                 </div>
                 <div class="offers__item--status">
-                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a>
+                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div>
+                  <div class="offers__item--rew">откликов:<span class="value"> 12</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a><a href="#" class="offers__item--favorite"></a>
                 </div>
               </div>
               <div class="offers__item">
@@ -117,7 +135,8 @@
                   <div class="offers__item--from date">Дата последнего исправления:<span class="value"> 30.06.2018</span></div>
                 </div>
                 <div class="offers__item--status">
-                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a>
+                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div>
+                  <div class="offers__item--rew">откликов:<span class="value"> 12</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a><a href="#" class="offers__item--favorite"></a>
                 </div>
               </div>
               <div class="offers__item">
@@ -130,7 +149,8 @@
                   <div class="offers__item--from date">Дата последнего исправления:<span class="value"> 30.06.2018</span></div>
                 </div>
                 <div class="offers__item--status">
-                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a>
+                  <div class="offers__item--price">бюджет:<span class="value"> 2500 руб</span></div>
+                  <div class="offers__item--rew">откликов:<span class="value"> 12</span></div><a href="proposal.html" class="offers__item--more">посмотреть</a><a href="#" class="offers__item--favorite"></a>
                 </div>
               </div>
               <div class="pagination">

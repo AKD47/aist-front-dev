@@ -4,14 +4,7 @@ section.offers
 
         .container
 
-            h1.info__separator--title Мы созданы чтобы помогать людям!
-
-            .info__separator--icon
-                img(src='img/icons/white-logo-icon.png' )
-
-    .offers__wrapper
-
-        .container
+            h1.info__separator--title поиск заявок
 
             form.search-banner__form
 
@@ -50,161 +43,201 @@ section.offers
 
                 input(type='submit' value='поиск').search-banner__form--submit
 
+
+    .offers__wrapper
+
+        .container
+
             .offers__box
 
                 .offers__filter
 
                     form#offers-filter-form.offers__filter--form
 
-                        label Дата
+                        label.offers__filter--label Дата
                         .search-banner__form--date
-                            input(type='text' name='' placeholder='Дата').search-banner__form--field
+                            input(type='text' name='date' placeholder='Дата').search-banner__form--field
+
+                        label.offers__filter--label Бюджет, ₽
+
+                        label(for="price").offers__filter--price-from от:
+                            input(type="text" selprice="0" name="minPrice" value="0" id="price" maxlength="10").offers__filter--price-field
+
+                        label(for="price2").offers__filter--price-from до:
+                            input(type="text" selprice="20000" name="maxPrice" value="20000" id="price2" maxlength="10").offers__filter--price-field
+
+                        #slider_price.offers__filter--slider
+
+                        label.offers__filter--label Вес, кг
+
+                        label(for="weight").offers__filter--price-from от:
+                                input(type="text" weight="0" name="minWeight" value="0" id="weight" maxlength="10").offers__filter--price-field
+
+                        label(for="weight2").offers__filter--price-from до:
+                                input(type="text" weight="200" name="maxWeight" value="200" id="weight2" maxlength="10").offers__filter--price-field
+
+                        #slider_weight.offers__filter--slider
 
                 .offers__items-wrapper
 
-                    .offers__item
+                                    .offers__item
 
-                        h3 Пакет с вещами, не большой
+                                        h3 Пакет с вещами, не большой
 
-                        .offers__item--img
-                            img(src='img/cargo-banner.png' alt='img')
+                                        .offers__item--img
+                                            img(src='img/cargo-banner.png' alt='img')
 
-                        .offers__item--descr
+                                        .offers__item--descr
 
-                            .offers__item--from.from Откуда везти:
-                                span.value  Москва, Московская область
-                            .offers__item--from.from Куда везти:
-                                span.value  Севастополь, Крым
-                            .offers__item--from.final-date Срок доставки:
-                                span.value  до 30.06.2018
-                            .offers__item--from.date Дата последнего исправления:
-                                span.value  30.06.2018
-
-
-                        .offers__item--status
-
-                            .offers__item--price бюджет:
-                                span.value  2500 руб
-
-                            a(href='proposal.html').offers__item--more посмотреть
-
-                    .offers__item
-
-                        h3 Пакет с вещами, не большой
-
-                        .offers__item--img
-                            img(src='img/cargo-banner.png' alt='img')
-
-                        .offers__item--descr
-
-                            .offers__item--from.from Откуда везти:
-                                span.value  Москва, Московская область
-                            .offers__item--from.from Куда везти:
-                                span.value  Севастополь, Крым
-                            .offers__item--from.final-date Срок доставки:
-                                span.value  до 30.06.2018
-                            .offers__item--from.date Дата последнего исправления:
-                                span.value  30.06.2018
+                                            .offers__item--from.from Откуда везти:
+                                                span.value  Москва, Московская область
+                                            .offers__item--from.from Куда везти:
+                                                span.value  Севастополь, Крым
+                                            .offers__item--from.final-date Срок доставки:
+                                                span.value  до 30.06.2018
+                                            .offers__item--from.date Дата последнего исправления:
+                                                span.value  30.06.2018
 
 
-                        .offers__item--status
+                                        .offers__item--status
 
-                            .offers__item--price бюджет:
-                                span.value  2500 руб
+                                            .offers__item--price бюджет:
+                                                span.value  2500 руб
+                                            .offers__item--rew откликов:
+                                                span.value  12
 
-                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='#').offers__item--favorite.to-favorite
 
-                    .offers__item
+                                    .offers__item
 
-                        h3 Пакет с вещами, не большой
+                                        h3 Пакет с вещами, не большой
 
-                        .offers__item--img
-                            img(src='img/cargo-banner.png' alt='img')
+                                        .offers__item--img
+                                            img(src='img/cargo-banner.png' alt='img')
 
-                        .offers__item--descr
+                                        .offers__item--descr
 
-                            .offers__item--from.from Откуда везти:
-                                span.value  Москва, Московская область
-                            .offers__item--from.from Куда везти:
-                                span.value  Севастополь, Крым
-                            .offers__item--from.final-date Срок доставки:
-                                span.value  до 30.06.2018
-                            .offers__item--from.date Дата последнего исправления:
-                                span.value  30.06.2018
-
-
-                        .offers__item--status
-
-                            .offers__item--price бюджет:
-                                span.value  2500 руб
-
-                            a(href='proposal.html').offers__item--more посмотреть
-
-                    .offers__item
-
-                        h3 Пакет с вещами, не большой
-
-                        .offers__item--img
-                            img(src='img/cargo-banner.png' alt='img')
-
-                        .offers__item--descr
-
-                            .offers__item--from.from Откуда везти:
-                                span.value  Москва, Московская область
-                            .offers__item--from.from Куда везти:
-                                span.value  Севастополь, Крым
-                            .offers__item--from.final-date Срок доставки:
-                                span.value  до 30.06.2018
-                            .offers__item--from.date Дата последнего исправления:
-                                span.value  30.06.2018
+                                            .offers__item--from.from Откуда везти:
+                                                span.value  Москва, Московская область
+                                            .offers__item--from.from Куда везти:
+                                                span.value  Севастополь, Крым
+                                            .offers__item--from.final-date Срок доставки:
+                                                span.value  до 30.06.2018
+                                            .offers__item--from.date Дата последнего исправления:
+                                                span.value  30.06.2018
 
 
-                        .offers__item--status
+                                        .offers__item--status
 
-                            .offers__item--price бюджет:
-                                span.value  2500 руб
+                                            .offers__item--price бюджет:
+                                                span.value  2500 руб
+                                            .offers__item--rew откликов:
+                                                span.value  12
 
-                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='#').offers__item--favorite
 
-                    .offers__item
+                                    .offers__item
 
-                        h3 Пакет с вещами, не большой
+                                        h3 Пакет с вещами, не большой
 
-                        .offers__item--img
-                            img(src='img/cargo-banner.png' alt='img')
+                                        .offers__item--img
+                                            img(src='img/cargo-banner.png' alt='img')
 
-                        .offers__item--descr
+                                        .offers__item--descr
 
-                            .offers__item--from.from Откуда везти:
-                                span.value  Москва, Московская область
-                            .offers__item--from.from Куда везти:
-                                span.value  Севастополь, Крым
-                            .offers__item--from.final-date Срок доставки:
-                                span.value  до 30.06.2018
-                            .offers__item--from.date Дата последнего исправления:
-                                span.value  30.06.2018
+                                            .offers__item--from.from Откуда везти:
+                                                span.value  Москва, Московская область
+                                            .offers__item--from.from Куда везти:
+                                                span.value  Севастополь, Крым
+                                            .offers__item--from.final-date Срок доставки:
+                                                span.value  до 30.06.2018
+                                            .offers__item--from.date Дата последнего исправления:
+                                                span.value  30.06.2018
 
 
-                        .offers__item--status
+                                        .offers__item--status
 
-                            .offers__item--price бюджет:
-                                span.value  2500 руб
+                                            .offers__item--price бюджет:
+                                                span.value  2500 руб
+                                            .offers__item--rew откликов:
+                                                span.value  12
 
-                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='#').offers__item--favorite
 
-                    .pagination
-                        ul
-                            li.prev.disabled
-                                a(href='#')
-                            li.active
-                                a(href='#') 1
-                            li
-                                a(href='#') 2
-                            li
-                                a(href='#') 3
-                            li
-                                a(href='#') 4
-                            li
-                                a(href='#') 5
-                            li.next
-                                a(href='#')
+                                    .offers__item
+
+                                        h3 Пакет с вещами, не большой
+
+                                        .offers__item--img
+                                            img(src='img/cargo-banner.png' alt='img')
+
+                                        .offers__item--descr
+
+                                            .offers__item--from.from Откуда везти:
+                                                span.value  Москва, Московская область
+                                            .offers__item--from.from Куда везти:
+                                                span.value  Севастополь, Крым
+                                            .offers__item--from.final-date Срок доставки:
+                                                span.value  до 30.06.2018
+                                            .offers__item--from.date Дата последнего исправления:
+                                                span.value  30.06.2018
+
+
+                                        .offers__item--status
+
+                                            .offers__item--price бюджет:
+                                                span.value  2500 руб
+                                            .offers__item--rew откликов:
+                                                span.value  12
+
+                                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='#').offers__item--favorite
+
+                                    .offers__item
+
+                                        h3 Пакет с вещами, не большой
+
+                                        .offers__item--img
+                                            img(src='img/cargo-banner.png' alt='img')
+
+                                        .offers__item--descr
+
+                                            .offers__item--from.from Откуда везти:
+                                                span.value  Москва, Московская область
+                                            .offers__item--from.from Куда везти:
+                                                span.value  Севастополь, Крым
+                                            .offers__item--from.final-date Срок доставки:
+                                                span.value  до 30.06.2018
+                                            .offers__item--from.date Дата последнего исправления:
+                                                span.value  30.06.2018
+
+
+                                        .offers__item--status
+
+                                            .offers__item--price бюджет:
+                                                span.value  2500 руб
+                                            .offers__item--rew откликов:
+                                                span.value  12
+
+                                            a(href='proposal.html').offers__item--more посмотреть
+                                            a(href='#').offers__item--favorite
+
+                                    .pagination
+                                        ul
+                                            li.prev.disabled
+                                                a(href='#')
+                                            li.active
+                                                a(href='#') 1
+                                            li
+                                                a(href='#') 2
+                                            li
+                                                a(href='#') 3
+                                            li
+                                                a(href='#') 4
+                                            li
+                                                a(href='#') 5
+                                            li.next
+                                                a(href='#')

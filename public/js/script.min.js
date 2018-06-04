@@ -79,6 +79,23 @@ $(document).ready(function () {
         minDate: new Date()
 
     });
+
+    $('.offers__filter--form .search-banner__form--date .search-banner__form--field').datepicker({
+        language: {
+            days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+            daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
+            daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            today: 'Сегодня',
+            clear: 'Очистить',
+            dateFormat: 'dd.mm.yyyy',
+            timeFormat: 'hh:ii',
+            firstDay: 1
+        },
+        minDate: new Date()
+
+    });
     /*close datapicker*/
 
     /*slider single proposal*/
@@ -111,5 +128,106 @@ $(document).ready(function () {
         return false;
     });
     /*cose to form*/
+
+    $(function () {
+
+        var min = parseInt($("input[name='minPrice']").val(), 10);
+        var max = parseInt($("input[name='maxPrice']").val(), 10);
+        var selMin = $("input[name='minPrice']").attr('selprice');
+        var selMax = parseInt($("input[name='maxPrice']").attr('selprice'), 10);
+        /*console.log(formatNumber(selMin));*/
+        var number = 3500;
+
+        /*console.log(new Intl.NumberFormat().format(selMin));*/
+
+        $("#slider_price").slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [selMin, selMax],
+            //values: [formatNumber(selMin), selMax],
+            slide: function (event, ui) {
+                //Поле минимального значения
+                $("#price").val(ui.values[0]);
+                //Поле максимального значения
+                $("#price2").val(ui.values[1]);
+            },
+            stop: function (event, ui) {
+                $("input[name='minPrice']").val(ui.values[0]).change();
+                $("input[name='maxPrice']").val(ui.values[1]).change();
+                /* var obj = $(this).closest('div');
+                 filterSearchCount(obj);*/
+
+            }
+
+        });
+        //Записываем значения ползунков в момент загрузки страницы
+        //То есть значения по умолчанию
+        $("#price").val($("#slider_price").slider("values", 0));
+        $("#price2").val($("#slider_price").slider("values", 1));
+    });
+    $('#price').change(function () {
+        var val = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_price').slider("values", 0, val);
+        filterSearchCount(obj);
+    });
+    $('#price2').change(function () {
+        var val1 = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_price').slider("values", 1, val1);
+
+        filterSearchCount(obj);
+    });
+
+    $(function () {
+
+        var min = parseInt($("input[name='minWeight']").val(), 10);
+        var max = parseInt($("input[name='maxWeight']").val(), 10);
+        var wMin = $("input[name='minWeight']").attr('weight');
+        var wMax = parseInt($("input[name='maxWeight']").attr('weight'), 10);
+        /*console.log(formatNumber(selMin));*/
+        var number = 3500;
+
+        /*console.log(new Intl.NumberFormat().format(selMin));*/
+
+        $("#slider_weight").slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [wMin, wMax],
+            //values: [formatNumber(selMin), selMax],
+            slide: function (event, ui) {
+                //Поле минимального значения
+                $("#weight").val(ui.values[0]);
+                //Поле максимального значения
+                $("#weight2").val(ui.values[1]);
+            },
+            stop: function (event, ui) {
+                $("input[name='minWeight']").val(ui.values[0]).change();
+                $("input[name='maxWeight']").val(ui.values[1]).change();
+                /* var obj = $(this).closest('div');
+                 filterSearchCount(obj);*/
+
+            }
+
+        });
+        //Записываем значения ползунков в момент загрузки страницы
+        //То есть значения по умолчанию
+        $("#weight").val($("#slider_weight").slider("values", 0));
+        $("#weight2").val($("#slider_weight").slider("values", 1));
+    });
+    $('#weight').change(function () {
+        var val = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_weight').slider("values", 0, val);
+        filterSearchCount(obj);
+    });
+    $('#weight2').change(function () {
+        var val1 = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_weight').slider("values", 1, val1);
+        filterSearchCount(obj);
+    });
 
 });

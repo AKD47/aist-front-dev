@@ -5,6 +5,15 @@
   background-color: #efefef;
   display: block;
 
+  .info__separator {
+    background-image: url('../img/orders-filter-bg.png');
+
+    .search-banner__form {
+      margin-top: 24px;
+      margin-bottom: 50px;
+    }
+  }
+
   &__title {
     position: relative;
     float: left;
@@ -141,10 +150,10 @@
     float: left;
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 2px;
-    background-color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
+    //border-radius: 2px;
+    //background-color: #fff;
+    //padding-left: 20px;
+    //padding-right: 20px;
     @include box-sizing(border-box);
 
     .offers__resp-form--maintitle {
@@ -158,11 +167,89 @@
     position: relative;
     float: left;
     width: 220px;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px;
+    @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      width: 100%;
+    }
 
     &--form {
       position: relative;
       float: left;
       width: 100%;
+
+      .search-banner__form--date {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &--label {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #313844;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &--price-from {
+      position: relative;
+      float: left;
+      width: 50%;
+    }
+
+    &--price-field {
+      position: relative;
+      float: right;
+      width: 100%;
+      height: 39px;
+      background-color: white;
+      border: 1px solid #1287d9;
+      border-radius: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      @include box-sizing(border-box);
+    }
+
+    &--slider {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 8px;
+      margin-top: 10px;
+      margin-bottom: 42px;
+      background-color: #3da1e6;
+      z-index: 0;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .ui-slider-range {
+        background-color: #000;
+      }
+
+      .ui-slider-handle {
+        cursor: pointer;
+        outline: none;
+        width: 20px;
+        height: 20px;
+        background-color: #565656;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: -6px;
+        margin-left: -11px;
+
+        &:nth-of-type(2) {
+          margin-left: -11px;
+        }
+      }
     }
   }
 
@@ -173,28 +260,52 @@
     width: -moz-calc(100% - 220px);
     padding-left: 20px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .pagination {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
     position: relative;
     float: left;
     width: 100%;
-    padding-top: 20px;
+    //padding-top: 20px;
     padding-bottom: 20px;
+    //padding-left: 20px;
+    //padding-right: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #1287d9;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    border-radius: 2px;
     @include box-sizing(border-box);
 
     > h3 {
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      padding-top: 18px;
+      padding-bottom: 14px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      @include box-sizing(border-box);
+      border-bottom: 1px solid #d2d2d2;
       color: #313844;
       font-size: 22px;
       text-align: left;
       font-weight: 400;
+
+      @include breakpoint(max-width 700px) {
+        margin-bottom: 0;
+      }
     }
 
     &--img {
@@ -204,6 +315,7 @@
       width: 300px;
       height: 200px;
       overflow: hidden;
+      padding-left: 20px;
       padding-right: 20px;
       @include box-sizing(border-box);
 
@@ -216,6 +328,7 @@
         width: 100%;
         margin-bottom: 20px;
         padding-right: 0;
+        padding-left: 0;
       }
     }
 
@@ -229,7 +342,8 @@
       @include breakpoint(max-width 700px) {
         width: 100%;
         margin-bottom: 20px;
-        padding-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     }
 
@@ -245,6 +359,7 @@
       .value {
         font-size: 16px;
         font-weight: 700;
+        color: #1287d9;
       }
     }
 
@@ -307,6 +422,7 @@
       .value {
         font-size: 16px;
         font-weight: 700;
+        color: #313844;
       }
     }
 
@@ -315,9 +431,10 @@
       .value {
         font-size: 16px;
         font-weight: 700;
+        color: #313844;
       }
     }
-    
+
     &--about-title {
       position: relative;
       float: left;
@@ -344,11 +461,13 @@
       position: relative;
       float: left;
       width: 20%;
+      padding-right: 20px;
 
       @include breakpoint(max-width 700px) {
         width: 100%;
         margin-bottom: 20px;
-        padding-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     }
 
@@ -359,10 +478,29 @@
       color: #313844;
       font-size: 16px;
       font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 10px;
 
       .value {
         font-size: 22px;
         color: #1184d6;
+      }
+    }
+
+    &--rew {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #313844;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 10px;
+
+      .value {
+        font-size: 16px;
+        color: #313844;
+        font-weight: 600;
       }
     }
 
@@ -390,6 +528,27 @@
       }
     }
 
+    &--favorite {
+      position: relative;
+      float: left;
+      width: 32px;
+      height: 31px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background-image: url('../img/icons/fav-start-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+      &:hover {
+        background-image: url('../img/icons/fav-start-active-icon.png');
+      }
+    }
+
+    &--favorite.to-favorite {
+      background-image: url('../img/icons/fav-start-active-icon.png');
+    }
+
     &--more.complaint {
       background-color: #e91818;
       border: 1px solid #e91818;
@@ -399,7 +558,6 @@
         background-image: linear-gradient(to top, #e91818 0%, #ab1818 100%);
       }
     }
-
   }
 
   &__images {
@@ -631,8 +789,8 @@
       .cabinet__avatar {
         width: 120px;
         height: 120px;
-        margin-left: calc(50% - (120px/2));
-        margin-left: -moz-calc(50% - (120px/2));
+        margin-left: calc(50% - (120px / 2));
+        margin-left: -moz-calc(50% - (120px / 2));
 
         @include breakpoint(max-width 700px) {
           width: 100%;

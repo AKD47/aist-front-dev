@@ -20,8 +20,8 @@
     }
 
     @include breakpoint(max-width 1024px) {
-      margin-left: calc(50% - (200px/2));
-      margin-left: -moz-calc(50% - (200px/2));
+      margin-left: calc(50% - (200px / 2));
+      margin-left: -moz-calc(50% - (200px / 2));
     }
   }
 
@@ -103,7 +103,7 @@
     //height: 18px;
     margin: 0 4px;
 
-    .fa{
+    .fa {
       font-size: 18px;
       color: #313844;
 
@@ -193,6 +193,128 @@
 
     @include breakpoint(max-width 700px) {
       margin-bottom: 10px;
+    }
+  }
+
+  &__user-menu {
+    position: relative;
+    float: left;
+    width: 220px;
+    cursor: pointer;
+
+    &--name {
+      position: relative;
+      float: left;
+      margin: 0 15px;
+      color: #1287d9;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &--notification {
+      position: relative;
+      float: left;
+      width: 32px;
+      height: 32px;
+      margin-top: -3px;
+      border-radius: 50%;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      background-color: #313844;
+      line-height: 29px;
+      vertical-align: middle;
+    }
+
+    &--arr {
+      position: relative;
+      float: left;
+      width: 18px;
+      height: 16px;
+      margin-top: 8px;
+      margin-left: 20px;
+      overflow: hidden;
+      background-image: url('../img/icons/arrow-down-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+
+  &__user-dropdown {
+    display: none;
+    position: absolute;
+    width: 350px;
+    top: 100%;
+    left: auto;
+    right: 0;
+    z-index: 1000;
+    float: none;
+    padding: 8px 0;
+    @include box-sizing(border-box);
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: left;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    background-clip: border-box;
+
+    ul {
+      position: relative;
+      float: left;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        float: left;
+        width: 100%;
+
+        a {
+          position: relative;
+          float: left;
+          width: 100%;
+          padding: 10px 20px;
+          text-align: left;
+          color: #313844;
+          font-size: 16px;
+          font-weight: 400;
+
+          &:hover, &:active, &:focus {
+            color: #fff;
+            background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+          }
+
+          .new-notification {
+            display: block;
+            position: absolute;
+            min-width: 18px;
+            height: 18px;
+            top: 12px;
+            right: 16px;
+            padding: 0 3px 0 4px;
+            background-color: #313844;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 50%;
+            @include box-sizing(border-box);
+            z-index: 2;
+          }
+        }
+
+        a.current {
+          color: #fff;
+          background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
+        }
+      }
     }
   }
 }

@@ -33,6 +33,26 @@
 
 $(document).ready(function () {
 
+    /*show header dropdown*/
+    $(document).on('click', '.header__user-menu', function () {
+        var dropdown = $(this).closest('.header__elements').find('.header__user-dropdown');
+        if( $(this).hasClass('js-show-dropdown') ) {
+            $(this).removeClass('js-show-dropdown');
+            dropdown.css('display', 'none');
+        } else {
+            $(this).addClass('js-show-dropdown');
+            dropdown.css('display', 'block');
+        }
+    });
+
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.header__elements').length != 1) {
+            $('.header__user-menu').removeClass('js-show-dropdown');
+            $('.header__user-dropdown').css('display', 'none');
+        }
+    });
+    /*close header dropdown*/
+
     /*search form list*/
     $(document).on('input', '.search-banner__form--field', function () {
         var list = $(this).next('.search-banner__form--list');

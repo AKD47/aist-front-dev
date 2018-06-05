@@ -1128,6 +1128,63 @@ textarea:active {
   }
 }
 
+.offers__buttons {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.offers__buttons--sort {
+  position: relative;
+  float: right;
+}
+
+@media (max-width: 700px) {
+  .offers__buttons--sort {
+    width: 100%;
+    margin-top: 18px;
+  }
+}
+
+.offers__buttons--sort .title {
+  position: relative;
+  float: left;
+  margin-top: 9px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.offers__buttons--sort > a {
+  position: relative;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 18px;
+  padding-top: 9px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.offers__buttons--sort > a .fa {
+  color: #313844;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.offers__buttons--sort > a:hover .fa {
+  color: #1287d9;
+}
+
 .offers__box {
   position: relative;
   float: left;
@@ -1153,6 +1210,8 @@ textarea:active {
   padding: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 700px) {
@@ -1219,7 +1278,7 @@ textarea:active {
 }
 
 .offers__filter--slider .ui-slider-range {
-  background-color: #000;
+  background-color: #d2d2d2;
 }
 
 .offers__filter--slider .ui-slider-handle {
@@ -1250,6 +1309,10 @@ textarea:active {
   box-sizing: border-box;
 }
 
+.offers__items-wrapper .offers__item:first-of-type {
+  padding-bottom: 0;
+}
+
 @media (max-width: 700px) {
   .offers__items-wrapper {
     width: 100%;
@@ -1273,6 +1336,8 @@ textarea:active {
   border-radius: 2px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .offers__item > h3 {
@@ -1292,6 +1357,10 @@ textarea:active {
   font-size: 22px;
   text-align: left;
   font-weight: 400;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 700px) {
@@ -1393,6 +1462,10 @@ textarea:active {
   color: #313844;
   font-size: 16px;
   font-weight: 400;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .offers__item--from .value {
@@ -1610,6 +1683,7 @@ textarea:active {
   float: left;
   width: 300px;
   overflow: hidden;
+  padding-left: 20px;
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1697,6 +1771,7 @@ textarea:active {
   float: left;
   width: 50%;
   margin-top: 20px;
+  padding-left: 20px;
   padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1930,6 +2005,9 @@ textarea:active {
   position: relative;
   float: left;
   width: 250px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media (max-width: 700px) {

@@ -72,206 +72,211 @@ html
                                     span.value  2500 руб
 
                                 a(href='#response-form').offers__item--more.go-to откликнуться
-                                a(href='#').offers__item--more В избранное
+                                a(href='#').offers__item--favorite
                                 a(href='#').offers__item--more.complaint пожаловаться
 
 
 
                     .offers__box
 
-                        form.offers__resp-form#response-form
+                        .offers__item
 
-                            h3.offers__resp-form--maintitle Оставить заявку:
+                            form.offers__resp-form#response-form
 
-                            label.offers__resp-form--title Бюджет:
+                                h3.offers__resp-form--maintitle Оставить заявку:
 
-                            input.offers__resp-form--field(minlength="1" maxlength="50" type="text" placeholder="Ваша цена")
+                                label.offers__resp-form--title Бюджет:
 
-                            label.offers__resp-form--title Срок исполнения:
+                                input.offers__resp-form--field(minlength="1" maxlength="50" type="text" placeholder="Ваша цена")
 
-                            input.offers__resp-form--field(minlength="6" maxlength="8" type="text" placeholder="Срок выполнения работы")
+                                label.offers__resp-form--title Срок исполнения:
 
-                            label.offers__resp-form--title Дополнительно:
+                                input.offers__resp-form--field(minlength="6" maxlength="8" type="text" placeholder="Срок выполнения работы")
 
-                            textarea.offers__resp-form--text(minlength="10" maxlength="200" placeholder="Текст предложения (не более 200символов)")
+                                label.offers__resp-form--title Дополнительно:
 
-                            input.offers__resp-form--submit(type="submit" value="откликнуться")
+                                textarea.offers__resp-form--text(minlength="10" maxlength="200" placeholder="Текст предложения (не более 200символов)")
 
-                        .offers__resp-form--notification
+                                input.offers__resp-form--submit(type="submit" value="откликнуться")
 
-                            h3.offers__resp-form--maintitle Как повысить шансы?
+                            .offers__resp-form--notification
 
-                            ol
-                                li Снижайте бюджет
-                                li Указывайте минимальные, но выполнимые сроки
-                                li Указывайте свои приемущества
-                                li Имейте максимум положительных отзывов
+                                h3.offers__resp-form--maintitle Как повысить шансы?
+
+                                ol
+                                    li Снижайте бюджет
+                                    li Указывайте минимальные, но выполнимые сроки
+                                    li Указывайте свои приемущества
+                                    li Имейте максимум положительных отзывов
+
 
                     .offers__box
 
-                        h3.offers__resp-form--maintitle Список всех откликнувшихся
+                        .offers__item
 
-                        .offers__recall
+                            h3.offers__resp-form--maintitle Список всех откликнувшихся
 
-                            a(href='#').offers__recall--name
+                            .offers__recall
 
-                                .cabinet__avatar
+                                a(href='#').offers__recall--name
 
-                                .cabinet__user-name Иван Петров
+                                    .cabinet__avatar
 
-                                .cabinet__rating
-                                    .cabinet__rating--starts
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star
-                                        span.star
-                                    span.cabinet__rating--val 3,25
-                                    span.cabinet__rating--total (15 оценок)
+                                    .cabinet__user-name Иван Петров
 
-                            .offers__recall--body
+                                    .cabinet__rating
+                                        .cabinet__rating--starts
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star
+                                            span.star
+                                        span.cabinet__rating--val 3,25
+                                        span.cabinet__rating--total (15 оценок)
 
-                                p Выполню за определенное время и за определенную сумму, звоните, обговорим
+                                .offers__recall--body
 
-                            .offers__recall--tool
+                                    p Выполню за определенное время и за определенную сумму, звоните, обговорим
 
-                                a(href='#').offers__item--more Выбрать
-                                a(href='#').offers__item--more безопасный выбор
-                                a(href='#').offers__item--more.complaint Отклонить
+                                .offers__recall--tool
 
-
-                        .offers__recall
-
-                            a(href='#').offers__recall--name
-
-                                .cabinet__avatar
-
-                                .cabinet__user-name Иван Петров
-
-                                .cabinet__rating
-                                    .cabinet__rating--starts
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star
-                                        span.star
-                                    span.cabinet__rating--val 3,25
-                                    span.cabinet__rating--total (15 оценок)
-
-                            .offers__recall--body
-
-                                p Выполню за определенное время и за определенную сумму, звоните, обговорим
-
-                            .offers__recall--tool
-
-                                a(href='#').offers__item--more Выбрать
-                                a(href='#').offers__item--more безопасный выбор
-                                a(href='#').offers__item--more.complaint Отклонить
+                                    a(href='#').offers__item--more Выбрать
+                                    a(href='#').offers__item--more безопасный выбор
+                                    a(href='#').offers__item--more.complaint Отклонить
 
 
-                        .offers__recall
+                            .offers__recall
 
-                            a(href='#').offers__recall--name
+                                a(href='#').offers__recall--name
 
-                                .cabinet__avatar
+                                    .cabinet__avatar
 
-                                .cabinet__user-name Иван Петров
+                                    .cabinet__user-name Иван Петров
 
-                                .cabinet__rating
-                                    .cabinet__rating--starts
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star
-                                        span.star
-                                    span.cabinet__rating--val 3,25
-                                    span.cabinet__rating--total (15 оценок)
+                                    .cabinet__rating
+                                        .cabinet__rating--starts
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star
+                                            span.star
+                                        span.cabinet__rating--val 3,25
+                                        span.cabinet__rating--total (15 оценок)
 
-                            .offers__recall--body
+                                .offers__recall--body
 
-                                p Выполню за определенное время и за определенную сумму, звоните, обговорим
+                                    p Выполню за определенное время и за определенную сумму, звоните, обговорим
 
-                            .offers__recall--tool
+                                .offers__recall--tool
 
-                                a(href='#').offers__item--more Выбрать
-                                a(href='#').offers__item--more безопасный выбор
-                                a(href='#').offers__item--more.complaint Отклонить
-
-
-                        .offers__recall
-
-                            a(href='#').offers__recall--name
-
-                                .cabinet__avatar
-
-                                .cabinet__user-name Иван Петров
-
-                                .cabinet__rating
-                                    .cabinet__rating--starts
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star
-                                        span.star
-                                    span.cabinet__rating--val 3,25
-                                    span.cabinet__rating--total (15 оценок)
-
-                            .offers__recall--body
-
-                                p Выполню за определенное время и за определенную сумму, звоните, обговорим
-
-                            .offers__recall--tool
-
-                                a(href='#').offers__item--more Выбрать
-                                a(href='#').offers__item--more безопасный выбор
-                                a(href='#').offers__item--more.complaint Отклонить
+                                    a(href='#').offers__item--more Выбрать
+                                    a(href='#').offers__item--more безопасный выбор
+                                    a(href='#').offers__item--more.complaint Отклонить
 
 
-                        .offers__recall
+                            .offers__recall
 
-                            a(href='#').offers__recall--name
+                                a(href='#').offers__recall--name
 
-                                .cabinet__avatar
+                                    .cabinet__avatar
 
-                                .cabinet__user-name Иван Петров
+                                    .cabinet__user-name Иван Петров
 
-                                .cabinet__rating
-                                    .cabinet__rating--starts
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star.fill-star
-                                        span.star
-                                        span.star
-                                    span.cabinet__rating--val 3,25
-                                    span.cabinet__rating--total (15 оценок)
+                                    .cabinet__rating
+                                        .cabinet__rating--starts
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star
+                                            span.star
+                                        span.cabinet__rating--val 3,25
+                                        span.cabinet__rating--total (15 оценок)
 
-                            .offers__recall--body
+                                .offers__recall--body
 
-                                p Выполню за определенное время и за определенную сумму, звоните, обговорим
+                                    p Выполню за определенное время и за определенную сумму, звоните, обговорим
 
-                            .offers__recall--tool
+                                .offers__recall--tool
 
-                                a(href='#').offers__item--more Выбрать
-                                a(href='#').offers__item--more безопасный выбор
-                                a(href='#').offers__item--more.complaint Отклонить
+                                    a(href='#').offers__item--more Выбрать
+                                    a(href='#').offers__item--more безопасный выбор
+                                    a(href='#').offers__item--more.complaint Отклонить
 
 
-                        .pagination
-                            ul
-                                li.prev.disabled
-                                    a(href='#')
-                                li.active
-                                    a(href='#') 1
-                                li
-                                    a(href='#') 2
-                                li
-                                    a(href='#') 3
-                                li
-                                    a(href='#') 4
-                                li
-                                    a(href='#') 5
-                                li.next
-                                    a(href='#')
+                            .offers__recall
+
+                                a(href='#').offers__recall--name
+
+                                    .cabinet__avatar
+
+                                    .cabinet__user-name Иван Петров
+
+                                    .cabinet__rating
+                                        .cabinet__rating--starts
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star
+                                            span.star
+                                        span.cabinet__rating--val 3,25
+                                        span.cabinet__rating--total (15 оценок)
+
+                                .offers__recall--body
+
+                                    p Выполню за определенное время и за определенную сумму, звоните, обговорим
+
+                                .offers__recall--tool
+
+                                    a(href='#').offers__item--more Выбрать
+                                    a(href='#').offers__item--more безопасный выбор
+                                    a(href='#').offers__item--more.complaint Отклонить
+
+
+                            .offers__recall
+
+                                a(href='#').offers__recall--name
+
+                                    .cabinet__avatar
+
+                                    .cabinet__user-name Иван Петров
+
+                                    .cabinet__rating
+                                        .cabinet__rating--starts
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star.fill-star
+                                            span.star
+                                            span.star
+                                        span.cabinet__rating--val 3,25
+                                        span.cabinet__rating--total (15 оценок)
+
+                                .offers__recall--body
+
+                                    p Выполню за определенное время и за определенную сумму, звоните, обговорим
+
+                                .offers__recall--tool
+
+                                    a(href='#').offers__item--more Выбрать
+                                    a(href='#').offers__item--more безопасный выбор
+                                    a(href='#').offers__item--more.complaint Отклонить
+
+
+                            .pagination
+                                ul
+                                    li.prev.disabled
+                                        a(href='#')
+                                    li.active
+                                        a(href='#') 1
+                                    li
+                                        a(href='#') 2
+                                    li
+                                        a(href='#') 3
+                                    li
+                                        a(href='#') 4
+                                    li
+                                        a(href='#') 5
+                                    li.next
+                                        a(href='#')
 
 
 

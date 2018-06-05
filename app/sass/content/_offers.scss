@@ -145,6 +145,62 @@
     }
   }
 
+  &__buttons {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+    @include box-sizing(border-box);
+
+    &--sort {
+      position: relative;
+      float: right;
+
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+        margin-top: 18px;
+      }
+
+      .title {
+        position: relative;
+        float: left;
+        margin-top: 9px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #313844;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      > a {
+        position: relative;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        border-radius: 2px;
+        text-align: center;
+        margin-bottom: 18px;
+        padding-top: 9px;
+        @include box-sizing(border-box);
+
+        .fa {
+          color: #313844;
+          font-weight: 700;
+          font-size: 22px;
+        }
+      }
+
+      > a:hover {
+
+        .fa {
+          color: #1287d9;
+        }
+      }
+    }
+  }
+
   &__box {
     position: relative;
     float: left;
@@ -172,6 +228,8 @@
     border-radius: 2px;
     padding: 20px;
     @include box-sizing(border-box);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     box-shadow: 0 5px 10px rgba(0,0,0,.2);
 
     @include breakpoint(max-width 700px) {
       width: 100%;
@@ -233,7 +291,7 @@
       }
 
       .ui-slider-range {
-        background-color: #000;
+        background-color: #d2d2d2;
       }
 
       .ui-slider-handle {
@@ -263,6 +321,10 @@
     padding-left: 20px;
     @include box-sizing(border-box);
 
+    .offers__item:first-of-type {
+      padding-bottom: 0;
+    }
+
     @include breakpoint(max-width 700px) {
       width: 100%;
       padding-left: 0;
@@ -287,6 +349,8 @@
     background-color: #fff;
     border-radius: 2px;
     @include box-sizing(border-box);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     box-shadow: 0 5px 10px rgba(0,0,0,.2);
 
     > h3 {
       position: relative;
@@ -304,6 +368,9 @@
       font-size: 22px;
       text-align: left;
       font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       @include breakpoint(max-width 700px) {
         margin-bottom: 0;
@@ -325,6 +392,7 @@
       font-size: 22px;
       text-align: left;
       font-weight: 400;
+
 
       @include breakpoint(max-width 700px) {
         margin-bottom: 0;
@@ -390,6 +458,9 @@
       color: #313844;
       font-size: 16px;
       font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       .value {
         font-size: 16px;
@@ -602,6 +673,7 @@
     width: 300px;
     //height: 200px;
     overflow: hidden;
+    padding-left: 20px;
     padding-right: 20px;
     @include box-sizing(border-box);
 
@@ -677,6 +749,7 @@
     width: 50%;
     margin-top: 20px;
     //margin-bottom: 20px;
+    padding-left: 20px;
     padding-right: 20px;
     @include box-sizing(border-box);
 
@@ -878,6 +951,8 @@
       position: relative;
       float: left;
       width: 250px;
+      padding-right: 20px;
+      @include box-sizing(border-box);
 
       @include breakpoint(max-width 700px) {
         width: 100%;

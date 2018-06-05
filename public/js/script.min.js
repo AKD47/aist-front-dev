@@ -129,6 +129,7 @@ $(document).ready(function () {
     });
     /*cose to form*/
 
+    /*products filter*/
     $(function () {
 
         var min = parseInt($("input[name='minPrice']").val(), 10);
@@ -170,14 +171,14 @@ $(document).ready(function () {
         var val = $(this).val();
         var obj = $(this).closest('div');
         $('#slider_price').slider("values", 0, val);
-        filterSearchCount(obj);
+        // filterSearchCount(obj);
     });
     $('#price2').change(function () {
         var val1 = $(this).val();
         var obj = $(this).closest('div');
         $('#slider_price').slider("values", 1, val1);
 
-        filterSearchCount(obj);
+        // filterSearchCount(obj);
     });
 
     $(function () {
@@ -221,13 +222,17 @@ $(document).ready(function () {
         var val = $(this).val();
         var obj = $(this).closest('div');
         $('#slider_weight').slider("values", 0, val);
-        filterSearchCount(obj);
+        // filterSearchCount(obj);
     });
     $('#weight2').change(function () {
         var val1 = $(this).val();
         var obj = $(this).closest('div');
         $('#slider_weight').slider("values", 1, val1);
-        filterSearchCount(obj);
+        // filterSearchCount(obj);
     });
+    /*close products filter*/
 
+    /*tooltip*/
+    $('.offers__buttons a').popover({trigger: "hover"});
+    /*close tooltip*/
 });

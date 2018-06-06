@@ -2347,12 +2347,124 @@ textarea:active {
   position: relative;
   float: left;
   width: 100%;
+  background-color: #efefef;
+}
+
+.cabinet__wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cabinet__wrapper:last-of-type {
+  margin-bottom: 50px;
+}
+
+.cabinet__wrapper--avatar {
+  position: relative;
+  float: left;
+  width: 220px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+  border-radius: 2px;
+}
+
+.cabinet__wrapper--descr {
+  position: relative;
+  float: left;
+  width: -webkit-calc(100% - 360px);
+  width: calc(100% - 360px);
+  width: -moz-calc(100% - 360px);
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cabinet__wrapper--rating {
+  position: relative;
+  float: left;
+  width: 140px;
+}
+
+.cabinet__navigation {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cabinet__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.cabinet__nav li {
+  position: relative;
+  float: left;
+}
+
+.cabinet__nav li a {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #373d49;
+  font-weight: 400;
+  border: 1px solid #d2d2d2;
+  border-radius: 2px;
+}
+
+.cabinet__nav li a:hover {
+  background-color: #efefef;
+}
+
+.cabinet__nav li.active a {
+  color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1287d9), to(#0e53b0));
+  background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: -o-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
 }
 
 .cabinet__avatar {
   position: relative;
   float: left;
-  width: 172px;
+  width: 100%;
   height: 172px;
   border: 1px solid #313844;
   background-image: url("../img/icons/gray-logo-icon.png");
@@ -2369,6 +2481,82 @@ textarea:active {
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.cabinet__user-male {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.cabinet__user-male--title {
+  position: relative;
+  float: left;
+  color: #313844;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.cabinet__user-male--val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #313844;
+}
+
+.cabinet__user-data {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.cabinet__user-data--title {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #313844;
+}
+
+.cabinet__user-data--list {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cabinet__user-data--list li {
+  position: relative;
+}
+
+.cabinet__user-data--list li a {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e91818;
+}
+
+.cabinet__user-data--list li a:hover {
+  color: #1287d9;
+  text-decoration: underline;
 }
 
 .cabinet__rating {

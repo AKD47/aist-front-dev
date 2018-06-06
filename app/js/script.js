@@ -34,7 +34,7 @@
 $(document).ready(function () {
 
     /*show header dropdown*/
-    $(document).on('click', '.header__user-menu', function () {
+    $(document).on('click', '.header__user-menu', function (event) {
         var dropdown = $(this).closest('.header__elements').find('.header__user-dropdown');
         if( $(this).hasClass('js-show-dropdown') ) {
             $(this).removeClass('js-show-dropdown');
@@ -54,7 +54,7 @@ $(document).ready(function () {
     /*close header dropdown*/
 
     /*search form list*/
-    $(document).on('input', '.search-banner__form--field', function () {
+    $(document).on('input', '.search-banner__form--field', function (event) {
         var list = $(this).next('.search-banner__form--list');
         if( list.length != 0 && $(this).val().length > 1 ) {
             list.css('display', 'block');

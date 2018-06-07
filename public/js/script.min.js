@@ -36,7 +36,7 @@ $(document).ready(function () {
     /*show header dropdown*/
     $(document).on('click', '.header__user-menu', function (event) {
         var dropdown = $(this).closest('.header__elements').find('.header__user-dropdown');
-        if( $(this).hasClass('js-show-dropdown') ) {
+        if ($(this).hasClass('js-show-dropdown')) {
             $(this).removeClass('js-show-dropdown');
             dropdown.css('display', 'none');
         } else {
@@ -53,10 +53,10 @@ $(document).ready(function () {
     });
     /*close header dropdown*/
 
-    /*search form list*/
+    /*search form litop*/
     $(document).on('input', '.search-banner__form--field', function (event) {
         var list = $(this).next('.search-banner__form--list');
-        if( list.length != 0 && $(this).val().length > 1 ) {
+        if (list.length != 0 && $(this).val().length > 1) {
             list.css('display', 'block');
         } else {
             return false;
@@ -67,7 +67,7 @@ $(document).ready(function () {
         event.preventDefault();
         var field = $(this).closest('.search-banner__form--list').prev('.search-banner__form--field'),
             list = $(this).closest('.search-banner__form--list'),
-           value = $(this).text();
+            value = $(this).text();
         field.val(value);
         list.css('display', 'none');
         return false;
@@ -85,16 +85,16 @@ $(document).ready(function () {
     /*datapicker*/
     $('.search-banner__form .search-banner__form--date .search-banner__form--field').datepicker({
         language: {
-            days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
-            daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
-            daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-            months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            daysShort: ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб'],
+            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
-            firstDay: 1
+            firtopDay: 1
         },
         minDate: new Date()
 
@@ -102,16 +102,16 @@ $(document).ready(function () {
 
     $('.offers__filter--form .search-banner__form--date .search-banner__form--field').datepicker({
         language: {
-            days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
-            daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
-            daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-            months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            daysShort: ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб'],
+            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
-            firstDay: 1
+            firtopDay: 1
         },
         minDate: new Date()
 
@@ -143,11 +143,51 @@ $(document).ready(function () {
         var href = $(this).attr('href'),
             target = $(href),
             top = target.offset().top;
-        console.log( href );
+        console.log(href);
         $('html,body').animate({scrollTop: top}, 1000);
         return false;
     });
     /*cose to form*/
+
+    /* scroll button*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 480) {
+            $('#Go-Top').css('display', 'block');
+        }
+        else {
+            $('#Go-Top').css('display', 'none');
+        }
+    });
+
+    $('#Go-Top').click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+    });
+    /* scroll button*/
+
+    /*scrolling filter*/
+    if ($(window).innerWidth() > 1024 && $('.offers__filter-wrapper').length !=0 ) {
+
+        $(window).scroll(function () {
+
+                var BlockingElement = parseInt($('.offers__items-wrapper').height() - $('.offers__items-wrapper').find('.pagination').height()),///высота блока всего блока без пагинации
+                    top = $(window).scrollTop(),//размер прокрутки окна браузераё
+                    wrapper = $(".offers__filter-wrapper"),
+                    wrapper_ot = wrapper.offset().top;
+
+                console.log( top );
+
+                if (top > wrapper_ot && top < (BlockingElement - 250)) {
+                    var h = Math.round(top - wrapper_ot);
+                    wrapper.css({"paddingTop": h});
+                } else if ( top < wrapper_ot) {
+                    wrapper.css({"paddingTop": 0});
+                }
+
+        });
+    }
+    /*scrolling filter*/
 
     /*products filter*/
     $(function () {
@@ -173,10 +213,10 @@ $(document).ready(function () {
                 //Поле максимального значения
                 $("#price2").val(ui.values[1]);
             },
-            stop: function (event, ui) {
+            topop: function (event, ui) {
                 $("input[name='minPrice']").val(ui.values[0]).change();
                 $("input[name='maxPrice']").val(ui.values[1]).change();
-                /* var obj = $(this).closest('div');
+                /* var obj = $(this).closetop('div');
                  filterSearchCount(obj);*/
 
             }
@@ -224,10 +264,10 @@ $(document).ready(function () {
                 //Поле максимального значения
                 $("#weight2").val(ui.values[1]);
             },
-            stop: function (event, ui) {
+            topop: function (event, ui) {
                 $("input[name='minWeight']").val(ui.values[0]).change();
                 $("input[name='maxWeight']").val(ui.values[1]).change();
-                /* var obj = $(this).closest('div');
+                /* var obj = $(this).closetop('div');
                  filterSearchCount(obj);*/
 
             }

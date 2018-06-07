@@ -287,6 +287,27 @@ textarea:active {
   cursor: default;
 }
 
+#Go-Top {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  bottom: 60px;
+  border-radius: 50%;
+  background-color: #1287d9;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#Go-Top svg {
+  width: 30px;
+  height: 25px;
+  fill: #fff;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 .header {
   display: block;
   position: relative;
@@ -1118,7 +1139,7 @@ textarea:active {
 
 .offers .info__separator .search-banner__form {
   margin-top: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 }
 
 .offers__title {
@@ -1338,14 +1359,23 @@ textarea:active {
   color: #1184d6;
 }
 
-.offers__filter {
+.offers__filter-wrapper {
   position: relative;
   float: left;
   width: 220px;
+}
+
+.offers__filter {
+  position: relative;
+  float: left;
+  width: 100%;
   border: 1px solid #d2d2d2;
   background-color: #fff;
   border-radius: 2px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -1366,7 +1396,7 @@ textarea:active {
 
 .offers__filter--form .search-banner__form--date {
   margin-right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .offers__filter--label {
@@ -1406,7 +1436,7 @@ textarea:active {
   width: 100%;
   height: 8px;
   margin-top: 10px;
-  margin-bottom: 42px;
+  margin-bottom: 20px;
   background-color: #3da1e6;
   z-index: 0;
 }
@@ -1434,6 +1464,35 @@ textarea:active {
 
 .offers__filter--slider .ui-slider-handle:nth-of-type(2) {
   margin-left: -11px;
+}
+
+.offers__filter--submit {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 41px;
+  margin-top: 15px;
+  background-color: #1287d9;
+  border: 1px solid #1287d9;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.offers__filter--submit:hover,
+.offers__filter--submit:active,
+.offers__filter--submit:focus {
+  color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1287d9), to(#0e53b0));
+  background-image: -webkit-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: -o-linear-gradient(bottom, #1287d9 0%, #0e53b0 100%);
+  background-image: linear-gradient(to top, #1287d9 0%, #0e53b0 100%);
 }
 
 .offers__items-wrapper {

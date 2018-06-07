@@ -4,8 +4,6 @@ section.offers
 
         .container
 
-            h1.info__separator--title поиск заявок
-
             form.search-banner__form
 
                 .search-banner__form--from
@@ -50,33 +48,37 @@ section.offers
 
             .offers__box
 
-                .offers__filter
+                .offers__filter-wrapper
 
-                    form#offers-filter-form.offers__filter--form
+                    .offers__filter
 
-                        label.offers__filter--label Дата
-                        .search-banner__form--date
-                            input(type='text' name='date' placeholder='Дата').search-banner__form--field
+                        form#offers-filter-form.offers__filter--form
 
-                        label.offers__filter--label Бюджет, ₽
+                            label.offers__filter--label Дата
+                            .search-banner__form--date
+                                input(type='text' name='date' placeholder='Дата').search-banner__form--field
 
-                        label(for="price").offers__filter--price-from от:
-                            input(type="text" selprice="0" name="minPrice" value="0" id="price" maxlength="10").offers__filter--price-field
+                            label.offers__filter--label Бюджет, ₽
 
-                        label(for="price2").offers__filter--price-from до:
-                            input(type="text" selprice="20000" name="maxPrice" value="20000" id="price2" maxlength="10").offers__filter--price-field
+                            label(for="price").offers__filter--price-from от:
+                                input(type="text" selprice="0" name="minPrice" value="0" id="price" maxlength="10").offers__filter--price-field
 
-                        #slider_price.offers__filter--slider
+                            label(for="price2").offers__filter--price-from до:
+                                input(type="text" selprice="20000" name="maxPrice" value="20000" id="price2" maxlength="10").offers__filter--price-field
 
-                        label.offers__filter--label Вес, кг
+                            #slider_price.offers__filter--slider
 
-                        label(for="weight").offers__filter--price-from от:
-                            input(type="text" weight="0" name="minWeight" value="0" id="weight" maxlength="10").offers__filter--price-field
+                            label.offers__filter--label Вес, кг
 
-                        label(for="weight2").offers__filter--price-from до:
-                            input(type="text" weight="200" name="maxWeight" value="200" id="weight2" maxlength="10").offers__filter--price-field
+                            label(for="weight").offers__filter--price-from от:
+                                input(type="text" weight="0" name="minWeight" value="0" id="weight" maxlength="10").offers__filter--price-field
 
-                        #slider_weight.offers__filter--slider
+                            label(for="weight2").offers__filter--price-from до:
+                                input(type="text" weight="200" name="maxWeight" value="200" id="weight2" maxlength="10").offers__filter--price-field
+
+                            #slider_weight.offers__filter--slider
+
+                            input(type='submit' value='применить').offers__filter--submit
 
                 .offers__items-wrapper
 

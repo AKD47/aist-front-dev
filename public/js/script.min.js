@@ -164,7 +164,13 @@ $(document).ready(function () {
         $("html, body").animate({scrollTop: 0}, 600);
         return false;
     });
-    /* scroll button*/
+    /*close scroll button*/
+    $(window).scroll(function () {
+        ScrollSearchForm();
+    });
+    /*scroll search form*/
+
+    /*close scroll search form*/
 
     /*scrolling filter*/
     if ($(window).innerWidth() > 1024 && $('.offers__filter-wrapper').length !=0 ) {
@@ -173,16 +179,17 @@ $(document).ready(function () {
 
                 var BlockingElement = parseInt($('.offers__items-wrapper').height() - $('.offers__items-wrapper').find('.pagination').height()),///высота блока всего блока без пагинации
                     top = $(window).scrollTop(),//размер прокрутки окна браузераё
+                    scroll_form = $('.info__separator.js-scroll-form.js-fixed').height();
                     wrapper = $(".offers__filter-wrapper"),
                     wrapper_ot = wrapper.offset().top;
 
-                console.log( top );
+                    console.log( scroll_form )
 
-                if (top > wrapper_ot && top < (BlockingElement - 250)) {
-                    var h = Math.round(top - wrapper_ot);
+                if (top > wrapper_ot && top < (BlockingElement - 444)) {
+                    var h = Math.round(top - wrapper_ot) + scroll_form;
                     wrapper.css({"paddingTop": h});
                 } else if ( top < wrapper_ot) {
-                    wrapper.css({"paddingTop": 0});
+                    wrapper.css({"paddingTop": 0 + scroll_form});
                 }
 
         });
@@ -296,3 +303,14 @@ $(document).ready(function () {
     $('.offers__buttons a').popover({trigger: "hover"});
     /*close tooltip*/
 });
+
+function ScrollSearchForm() {
+    var search_form = $('.js-scroll-form'),
+        header = $('.header').height();
+    if ($(window).scrollTop() >= header) {
+        search_form.addClass('js-fixed');
+    }
+    else {
+        search_form.removeClass('js-fixed');
+    }
+}

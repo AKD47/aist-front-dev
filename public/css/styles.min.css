@@ -1142,6 +1142,13 @@ textarea:active {
   margin-bottom: 24px;
 }
 
+.offers .info__separator.js-scroll-form.js-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
 .offers__title {
   position: relative;
   float: left;

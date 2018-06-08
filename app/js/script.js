@@ -165,6 +165,8 @@ $(document).ready(function () {
         return false;
     });
     /*close scroll button*/
+
+
     $(window).scroll(function () {
         ScrollSearchForm();
     });

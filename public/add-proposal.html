@@ -19,18 +19,60 @@
     <header class="header">
       <div class="container"><a href="/" class="header__logo"><img src="img/head-logo.png" alt="logo"></a>
         <div class="header__elements"><a href="mailto:" class="header__email">post@gmail.com</a>
-          <div class="header__social"><a href="#" class="header__social-link"><i class="fa fa-vk"></i></a><a href="#" class="header__social-link"><i class="fa fa-facebook-square"></i></a><a href="#" class="header__social-link"><i class="fa fa-twitter-square"></i></a><a href="#" class="header__social-link"><i class="fa fa-google-plus-square"></i></a></div><a href="login.html" class="header__login">Личный кабинет</a><a href="registration.html" class="header__reg">Регистрация</a><a href="add-proposal.html" class="header__add">Добавить на сайт</a>
+          <div class="header__social"><a href="#" class="header__social-link"><i class="fa fa-vk"></i></a><a href="#" class="header__social-link"><i class="fa fa-facebook-square"></i></a><a href="#" class="header__social-link"><i class="fa fa-twitter-square"></i></a><a href="#" class="header__social-link"><i class="fa fa-google-plus-square"></i></a></div><a href="add-proposal.html" class="header__add">Добавить на сайт</a>
+          <div class="header__user-menu"><span class="header__user-menu--name">Александр</span><span class="header__user-menu--notification">88+</span><span class="header__user-menu--arr"></span></div>
+          <div class="header__user-dropdown">
+            <ul>
+              <li><a href="#" class="current">Профиль</a></li>
+              <li><a href="#">Грузы</a></li>
+              <li><a href="#">Сообщения<span class="new-notification">88+</span></a></li>
+              <li><a href="#">Настройки</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
-    <section class="reg">
+    <section class="cabinet">
       <div class="container">
-        <h1 class="reg__title">Восстановление пароля</h1>
-        <h3 class="reg__subtitle">Заполните поля ниже:</h3>
-        <form class="reg__form">
-          <input type="text" name="e-mail" placeholder="Ваш E-mail" class="reg__form--field">
-          <input type="submit" value="Сбросить" class="reg__form--submit">
-        </form>
+        <div class="cabinet__wrapper">
+          <div class="cabinet__navigation">
+            <ul class="cabinet__nav">
+              <li class="active"><a href="#">Профиль</a></li>
+              <li><a href="#">Грузы</a></li>
+              <li><a href="#">Поездки</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">Сообщения</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Настройки</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cabinet__wrapper">
+          <div class="cabinet__wrapper--avatar">
+            <ul class="cabinet__user-data--tools">
+              <li><a href="#">Управление  объявлениями</a></li>
+              <li><a href="#">Добавить объявления</a></li>
+            </ul>
+          </div>
+          <div class="cabinet__wrapper--forms">
+            <form id="add-prop-form" class="cabinet__form">
+              <h3 class="cabinet__form--title">Добавить объявление</h3>
+              <div class="cabinet__form--line">
+                <label class="title">Заголовок объявления</label>
+                <input type="text" data-toggle="popover" data-placement="right" data-content="Введите наименование товара, объекта или услуги. В заголовке не допускается: номер телефона, электронный адрес, ссылки. Не допускаются заглавные буквы (кроме аббревиатур)." class="field">
+              </div>
+              <div class="cabinet__form--line">
+                <label class="title">Откуда везти</label>
+                <input type="text" data-toggle="popover" data-placement="right" data-content="Введите пункт назначения." class="field">
+              </div>
+              <div class="cabinet__form--line">
+                <label class="title">Куда везти</label>
+                <input type="text" data-toggle="popover" data-placement="right" data-content="Введите пункт назначения." class="field">
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">

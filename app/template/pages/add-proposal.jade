@@ -1,0 +1,63 @@
+doctype html
+html
+    head(lang='en')
+        include ../html_open
+
+    body
+        include ../header-authorized
+        section.cabinet
+
+            .container
+
+                .cabinet__wrapper
+
+                    .cabinet__navigation
+
+                        ul.cabinet__nav
+                            li.active
+                                a(href='#') Профиль
+                            li
+                                a(href='#') Грузы
+                            li
+                                a(href='#') Поездки
+                            li
+                                a(href='#') Мероприятия
+                            li
+                                a(href='#') Сообщения
+                            li
+                                a(href='#') Отзывы
+                            li
+                                a(href='#') Настройки
+
+                .cabinet__wrapper
+
+                    .cabinet__wrapper--avatar
+
+                            ul.cabinet__user-data--tools
+                                li
+                                    a(href='#') Управление  объявлениями
+                                li
+                                    a(href='#') Добавить объявления
+
+                    .cabinet__wrapper--forms
+
+                        form#add-prop-form.cabinet__form
+
+                            h3.cabinet__form--title Добавить объявление
+
+                            .cabinet__form--line
+                                label.title Заголовок объявления
+
+                                input(type='text' data-toggle="popover" data-placement="right" data-content="Введите наименование товара, объекта или услуги. В заголовке не допускается: номер телефона, электронный адрес, ссылки. Не допускаются заглавные буквы (кроме аббревиатур).").field
+
+                            .cabinet__form--line
+                                label.title Откуда везти
+
+                                input(type='text' data-toggle="popover" data-placement="right" data-content="Введите пункт назначения.").field
+
+                            .cabinet__form--line
+                                label.title Куда везти
+
+                                input(type='text' data-toggle="popover" data-placement="right" data-content="Введите пункт назначения.").field
+        include ../footer
+        include ../html_close
